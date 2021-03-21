@@ -1,0 +1,27 @@
+//font
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+// utils
+@import 'utils/_normalize';
+@import 'utils/_vars';
+@import 'utils/_mixins.scss';
+
+
+
+// components
+@import 'components/_buttons';
+@import 'components/_header';
+@import 'components/_containers';
+@import 'components/_our-service';
+@import 'components/_tabs-portfolio';
+@import 'components/our-price';
+@import 'components/_about_us_section';
+@import 'components/_contact-us';
+@import 'components/_social_networks';
+@import 'components/_footer';
+@import 'components/_mixin';
+<<<<<<< HEAD
+@import 'components/_navmobile';
+=======
+>>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c

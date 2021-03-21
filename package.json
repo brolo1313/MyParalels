@@ -1,0 +1,28 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "gulp Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brolo1313/MyParalels"
+  },
+  "author": "Yupin A",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brolo1313/MyParalels/issues"
+  },
+  "homepage": "https://github.com/brolo1313/MyParalels#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
+}

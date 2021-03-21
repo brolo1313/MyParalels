@@ -1,0 +1,38 @@
+.nav__mobile {
+   
+    width: 100px;
+    padding: 10px;
+
+    position:absolute;
+    top: 70px;
+    right:30px;
+    
+    line-height: 30px;
+    z-index: 1000;
+
+    background:#282a2e;
+    border-radius: 5px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .55s opacity, .55s visibility;
+
+}
+
+.active {
+    display:block;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.nav__list--item {
+    color: #fff;
+    
+
+    a{
+        color: inherit;
+    }
+   
+}
