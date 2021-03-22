@@ -48,17 +48,6 @@ burger.addEventListener('click', function() {
 //   console.log(event.target.tagName);
 //   }
 
-  
-        
-
-
-
-
-
-
-
-
-        
 
 // SlICK слайдер
 
@@ -74,3 +63,7 @@ burger.addEventListener('click', function() {
     
     
   });
+
+
+
+  //ТЕСТ ИСТОРИЯ
