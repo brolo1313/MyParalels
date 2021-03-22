@@ -105,9 +105,6 @@ body {
   margin: auto;
   margin-left: 50px;
   cursor: pointer; }
-  @media (min-width: 320px) and (max-width: 863px) {
-    .logo-box {
-      margin-right: 50px; } }
   @media (min-width: 320px) and (max-width: 568px) {
     .logo-box {
       margin-left: 0; } }
@@ -150,7 +147,7 @@ body {
   @media (min-width: 320px) and (max-width: 1124px) {
     .burger {
       display: flex;
-      margin: 40px 0px 0px 0px; } }
+      margin: 25px 0px 0px 0px; } }
 
 .burger span {
   width: 100%;
@@ -167,11 +164,11 @@ body {
 
 .navbar {
   width: 100%;
-  height: 115px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   background-color: #282a2e;
-  line-height: 115px;
+  line-height: 80px;
   box-sizing: border-box; }
 
 .navbar.fixed {
@@ -183,14 +180,14 @@ body {
   color: #c6c6c7;
   width: 40px;
   height: 40px;
-  margin-right: 130px;
+  margin-right: 60px;
   margin-left: 20px; }
   @media (min-width: 569px) and (max-width: 1124px) {
     .search-btn {
       margin-right: 50px; } }
   @media (min-width: 320px) and (max-width: 568px) {
     .search-btn {
-      margin-right: 50px; } }
+      margin-right: 25px; } }
 
 .header-slider {
   width: 100%;
@@ -326,12 +323,14 @@ h5 {
   color: #a5a5a5;
   text-align: center;
   margin-top: 15px; }
-  @media (min-width: 777px) and (max-width: 1124px) {
+  @media (min-width: 569px) and (max-width: 1124px) {
     .main-inform > div > p {
-      font-size: 16px; } }
-  @media (min-width: 320px) and (max-width: 568px) {
+      font-size: 16px;
+      word-wrap: break-word; } }
+  @media (min-width: 320px) and (max-width: 569px) {
     .main-inform > div > p {
-      font-size: 10px; } }
+      font-size: 10px;
+      word-wrap: break-word; } }
 
 .main-inform {
   display: flex;
@@ -355,7 +354,9 @@ h5 {
   @media (min-width: 320px) and (max-width: 568px) {
     .main-inform {
       margin: 0 auto;
-      padding: 15px 50px 20px 20px; } }
+      padding: 20px 30px 20px 30px;
+      column-gap: 0px;
+      flex-wrap: wrap; } }
 
 .block-service {
   position: relative;
@@ -375,7 +376,8 @@ h5 {
   @media (min-width: 320px) and (max-width: 568px) {
     .block-service {
       margin: 0 auto;
-      padding: 10px; } }
+      padding: 10px;
+      width: 45%; } }
 
 .turn__over {
   position: absolute;
@@ -386,6 +388,7 @@ h5 {
   background: #ada8a8;
   padding: 25px 5px 0 5px;
   border-radius: 5px;
+  word-wrap: break-word;
   transition: background .55s;
   opacity: 0;
   visibility: hidden;
@@ -398,7 +401,12 @@ h5 {
   visibility: visible; }
 
 .card-img {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  text-align: center; }
+  @media (min-width: 320px) and (max-width: 568px) {
+    .card-img {
+      width: 60%;
+      margin: 15px auto 15px auto; } }
 
 .separator-bg {
   width: 100%;
@@ -486,7 +494,6 @@ h5 {
   display: grid;
   display: none;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: 200px 200px;
   grid-gap: 15px;
   margin-left: 130px;
   margin-right: 130px;
@@ -1273,18 +1280,19 @@ li > p > a:hover {
   @media (min-width: 320px) and (max-width: 568px) {
     .under-footer {
       margin: 0 auto;
-      width: 70%;
+      width: 100%;
       padding-top: 30px;
       padding-bottom: 30px; } }
 
-@media (min-width: 320px) and (max-width: 568px) {
-  .logo-box {
-    margin-left: -15px; } }
+.logo-box__footer {
+  margin-left: 50px;
+  display: flex;
+  align-items: center; }
 
 .site-contact {
   display: flex;
   justify-content: flex-end;
-  margin: 0 auto;
+  margin: 0 45px 0 auto;
   gap: 2.2em; }
   @media (min-width: 777px) and (max-width: 1124px) {
     .site-contact {

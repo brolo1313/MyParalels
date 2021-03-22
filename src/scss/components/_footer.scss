@@ -147,23 +147,26 @@ li>p>a:hover{
     }
     @media (min-width: 320px) and (max-width: 568px){
         margin: 0 auto;
-        width: 70%;
+        width: 100%;
         padding-top: 30px;
-    padding-bottom: 30px;
+        padding-bottom: 30px;
+        
         
     }
     
 }
-.logo-box{
-    @media (min-width: 320px) and (max-width: 568px){
-        margin-left: -15px;
-    }
+.logo-box__footer{
+    
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+    
 }
 
 .site-contact{
    display: flex;
    justify-content: flex-end;
-   margin: 0 auto;
+   margin: 0 45px 0 auto;
    gap: 2.2em;
    @media (min-width: 777px) and (max-width: 1124px) {
     
