@@ -33,7 +33,7 @@
 	}
 }
 
-.tabs-nav > div {
+.tabs__item {
 	padding: 0 5px;
 	font-size: 14px;
 	width: 105px;
@@ -43,6 +43,9 @@
 	line-height: 30px;
 	margin-left: 6px;
 	margin-top: 20px;
+
+	color:#fff;
+	
 	@media (min-width: 320px) and (max-width: 568px){
 		width: 25%;
 		padding: 0;
@@ -52,7 +55,7 @@
 
 	transition:background .3s ease-in-out;
 	&:hover {
-		background: #1bbc9d;
+		
 		cursor: pointer;
 	
 		border-bottom: 2px solid #1f937d;
@@ -61,23 +64,39 @@
 
 }
 
-
+.tabs__item.active__tabs {
+		background: #1bbc9d;
+		
+	
+		border-bottom: 2px solid #1f937d;
+		outline-offset: -2px;
+}
 
 .tabs-content {
 	
 	display: grid;
+	display: none;
+
+
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) ;
 	grid-template-rows: 200px 200px;
-   grid-gap: 15px;
+   	grid-gap: 15px;
 	margin-left: 130px;	
 	margin-right: 130px;
 	max-width: 100%;
+
+	color:#fff;
+
 	justify-content: center;
 	margin-top:50px;
 	@media (min-width: 1320px){
 		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) ;
 	}
 	
+}
+
+.tabs-content.active__content {
+	display: grid;
 }
 
 .potrfolio-img {

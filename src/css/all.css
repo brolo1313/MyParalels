@@ -455,7 +455,7 @@ h5 {
     .tabs-nav {
       padding: 0 10px; } }
 
-.tabs-nav > div {
+.tabs__item {
   padding: 0 5px;
   font-size: 14px;
   width: 105px;
@@ -465,31 +465,41 @@ h5 {
   line-height: 30px;
   margin-left: 6px;
   margin-top: 20px;
+  color: #fff;
   transition: background .3s ease-in-out; }
   @media (min-width: 320px) and (max-width: 568px) {
-    .tabs-nav > div {
+    .tabs__item {
       width: 25%;
       padding: 0;
       font-size: 11px; } }
-  .tabs-nav > div:hover {
-    background: #1bbc9d;
+  .tabs__item:hover {
     cursor: pointer;
     border-bottom: 2px solid #1f937d;
     outline-offset: -2px; }
 
+.tabs__item.active__tabs {
+  background: #1bbc9d;
+  border-bottom: 2px solid #1f937d;
+  outline-offset: -2px; }
+
 .tabs-content {
   display: grid;
+  display: none;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: 200px 200px;
   grid-gap: 15px;
   margin-left: 130px;
   margin-right: 130px;
   max-width: 100%;
+  color: #fff;
   justify-content: center;
   margin-top: 50px; }
   @media (min-width: 1320px) {
     .tabs-content {
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); } }
+
+.tabs-content.active__content {
+  display: grid; }
 
 .potrfolio-img {
   width: 100%;
@@ -1302,10 +1312,10 @@ li > p > a:hover {
 
 .nav__mobile {
   width: 100px;
-  padding: 10px;
+  padding: 4px;
   position: absolute;
   top: 70px;
-  right: 30px;
+  right: 55px;
   line-height: 30px;
   z-index: 1000;
   background: #282a2e;
@@ -1319,7 +1329,13 @@ li > p > a:hover {
   opacity: 1;
   visibility: visible; }
 
+.nav_mobile--list {
+  text-align: center; }
+
 .nav__list--item {
   color: #fff; }
   .nav__list--item a {
     color: inherit; }
+  .nav__list--item:hover {
+    box-shadow: 0px 0px 11px cadetblue;
+    border-radius: 5px; }
