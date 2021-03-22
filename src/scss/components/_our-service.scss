@@ -25,11 +25,7 @@ h5{
 		font-size: 18px;
 	}
 	@media (min-width: 320px) and (max-width: 568px){
-<<<<<<< HEAD
 		font-size: 9px;
-=======
-		font-size: 13px;
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
 	}
 
 }
@@ -52,23 +48,17 @@ h5{
 
 .main-inform{
 	display: flex;
-<<<<<<< HEAD
 	column-gap: 10px;
 
-=======
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
 	margin-left: 130px;
 	margin-right: 130px;
 	margin-top: 40px;
 	box-sizing: border-box;
 	text-align: center;
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
 	@media (min-width: 777px) and (max-width: 1124px){
 		gap: 2em;
 		
@@ -83,16 +73,11 @@ h5{
 	}
 	@media (min-width: 320px) and (max-width: 568px){
 		margin: 0 auto;
-<<<<<<< HEAD
 		padding: 15px 50px 20px 20px;
-=======
-		padding: 15px 20px 20px 20px;
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
 	}
 }
 
 .block-service{
-<<<<<<< HEAD
 	position: relative;
 	padding: 50px  50px 50px  50px ;
 	width: 25%;
@@ -105,19 +90,10 @@ h5{
 	
 	@media (min-width: 777px) and (max-width: 1124px){
 		padding: 10px;
-=======
-	padding: 0 50px;
-	width: 25%;
-	margin-bottom: 60px;
-	
-	@media (min-width: 777px) and (max-width: 1124px){
-		padding: 0;
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
 		
 	}
 	@media (min-width: 568px) and (max-width: 777px){
 		margin-bottom: 40px;
-<<<<<<< HEAD
 		padding: 10px;
 	}
 	@media (min-width: 320px) and (max-width: 568px){
@@ -178,22 +154,6 @@ h5{
 // }
 
 
-=======
-		padding: 0;
-	}
-	@media (min-width: 320px) and (max-width: 568px){
-		margin: 0 auto;
-		padding: 0;
-	}
-}
-
-// .main-inform > div > img{
-// 	display: block;
-// 	margin: 0 auto;
-// 	margin-bottom: 20px;
-// }
-
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
 .card-img{
 	margin-bottom: 15px;
 	

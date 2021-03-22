@@ -60,7 +60,6 @@ form>input[type="text"]{
     width: 95%;
    }
   
-<<<<<<< HEAD
    &:focus::-webkit-input-placeholder {
        text-indent: 500px; transition: text-indent 0.3s ease;
        
@@ -74,13 +73,6 @@ form>input[type="text"]{
 
 #mail-input{
     margin-left:5px;
-=======
-}
-
-
-#mail-input{
-    margin-left:15px;
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
     @media (min-width: 320px) and (max-width: 568px){
         margin-left: 0;
     }
@@ -93,22 +85,14 @@ textarea{
     font-size: 20px;
     text-indent: 1em;
     color: #989898;
-<<<<<<< HEAD
     height: 170px;
     
-=======
-    height: 165px;
-    resize: both;
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
     @media (min-width: 320px) and (max-width: 568px){
         margin-top: 10px;
         height: auto;
     }
-<<<<<<< HEAD
 
     &:focus::-webkit-input-placeholder  {opacity: 0; transition: opacity 0.3s ease;}
-=======
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
 }
 
 // textarea::placeholder{
@@ -133,7 +117,6 @@ form>input[type="submit"]{
     color: #fff;
     cursor: pointer;
     // filter: drop-shadow(0px 0px 10px #1bbc9d);
-<<<<<<< HEAD
 
     transition:opacity 0.3s ease-in-out;
 
@@ -141,8 +124,6 @@ form>input[type="submit"]{
     &:focus {
         opacity: 0.58;
     }
-=======
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
 }
 
 
@@ -159,10 +140,6 @@ form>input[type="submit"]{
         width: 90%;
         margin-top: 25px;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
 }
 
 .more_info > .my_mail>div:nth-child(2){
@@ -176,7 +153,6 @@ form>input[type="submit"]{
 }
 
 .btn_more_info{
-<<<<<<< HEAD
     width: 130px;
     height: 45px;
     text-align: center;
@@ -187,13 +163,10 @@ form>input[type="submit"]{
     color: #fff;
     
 
-=======
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
     margin-top: 40px;
     margin-left: 0;
     background-color: #1bbc9d;
     border-bottom: 3px solid #1f937d;
-<<<<<<< HEAD
     
     cursor: pointer;
 
@@ -207,10 +180,6 @@ form>input[type="submit"]{
     &:hover {
         opacity: 0.58;
     }
-=======
-    color: #fff;
-    cursor: pointer;
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
 }
 
 

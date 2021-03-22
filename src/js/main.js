@@ -1,12 +1,8 @@
 
-<<<<<<< HEAD
 const navMobile = document.getElementById ('nav-mobile');
 const burger = document.getElementById ('burgerId');
 const fixedNavBar = document.querySelector ('.navbar')
 const body = document.body;
-
-
-
 
 
 
@@ -66,12 +62,6 @@ burger.addEventListener('click', function() {
 
 // SlICK слайдер
 
-=======
- 
-
-  // $('body').text('asdasda');
-          
->>>>>>> a256423d820d84ff1f03aaf50a68e8f1852c683c
   $('.header-slider').slick({
     
     infinite: true,
