@@ -4,7 +4,7 @@ const burger = document.getElementById ('burgerId');
 const fixedNavBar = document.querySelector ('.navbar')
 const tabsBtn = document.querySelectorAll ('.tabs__item');
 const tabsItems = document.querySelectorAll('.tabs-content');
-const body = document.body;
+
 
 
 
@@ -73,6 +73,7 @@ burger.addEventListener('click', function() {
 
 
 
+
 const anchors = document.querySelectorAll('a[href^="#"]');
 
 for(let anchor of anchors) {
@@ -88,9 +89,7 @@ for(let anchor of anchors) {
 }
 
 
-// document.onclick = function(event){
-//   console.log(event.target.tagName);
-//   }
+
 
 
 // SlICK слайдер
