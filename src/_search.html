@@ -26,6 +26,7 @@
         
         width: 200px;
         height: 30px;
+        margin-bottom: 10px;
         
         background-color: #222327;
         border: none;
@@ -33,15 +34,23 @@
         text-indent: 10px;
 
         border-radius: 5px;
+
+        transition: transform .5s ease-in-out ;
+    }
+
+    .search__item:focus {
+        
+        transform: scale(1.5);
     }
 
 
-    .search__btn {
+    .search__btn,
+    .home_link {
         width: 200px;
-        height: 15px;
+        height: 30px;
 
         text-align: center;
-        line-height:10px;
+        line-height:30px;
 
         background-color: #424242;
         color: #fff;
@@ -49,14 +58,28 @@
         border:none;
         border-radius: 5px;
         cursor: pointer;
+        
+        transition: background-color .5s ease-in-out;
+        transition: color .7s ease-in-out;
 
+    }
+
+    .search__btn:hover,
+    .home_link:hover {
+        background-color: #fff;
+        color: #424242;
+    }
+
+    .home_link {
+        text-decoration: none;
     }
 </style>
 
 <div class="search">
     <div class="search__input">
         <input type="text" class="search__item" placeholder="Поиск">
-        <button type="button" class="search__btn">ПОИСК</button>
+        <button type="button" class="search__btn">SEARCH</button>
+        <a class="home_link" href="index.html">BACK</a>
     </div>
    
     

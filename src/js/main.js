@@ -63,16 +63,24 @@ function checkscroll () {
 
 // навигация мобильная
 burger.addEventListener('click', function() {
+  
   if(navMobile.classList == 'nav__mobile'){
     navMobile.classList.add ('active');
   }else if (navMobile.classList == 'nav__mobile active') {
     navMobile.classList.remove ('active');
-
+    
   }
+})
+
+burger.addEventListener('focusout', function(){
+  if(true) navMobile.classList.remove ('active');
 })
 
 
 
+
+
+// якоря на секции
 
 const anchors = document.querySelectorAll('a[href^="#"]');
 

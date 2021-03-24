@@ -91,6 +91,8 @@ h5{
 	margin-bottom: 60px;
 	border-radius: 5px;
 	cursor: pointer;
+
+	
 	
 
 	box-shadow: 5px 5px 5px #111112;
@@ -109,6 +111,10 @@ h5{
 		width: 45%;
 	}
 
+	&:hover {
+		opacity: 0;
+	}
+
 	
 }
 
@@ -125,6 +131,7 @@ h5{
     background:rgba(173, 168, 168, 1);
     padding:25px 5px 0 5px;
 	border-radius: 5px;
+	
 
 	word-wrap: break-word;
 
@@ -133,13 +140,19 @@ h5{
 	
 	opacity: 0;
     visibility: hidden;
-    transition: .55s opacity, .55s visibility;
+    transition: .55s opacity, .55s visibility,transform 1.3s;
 	
 	
 
 	a:hover {
 		
 		text-decoration: underline;
+	}
+
+	span {
+		transform: rotateY(180deg);
+    	display: block;
+
 	}
 	
 }
@@ -151,6 +164,7 @@ h5{
     
 	opacity: 1;
     visibility: visible;
+	transform: rotateY(180deg);
 	
 	
 	

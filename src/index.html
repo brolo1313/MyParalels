@@ -40,14 +40,14 @@
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="nav-hidden" >
-                    <div class="burger"  id="burgerId">
+                    <div class="burger" tabindex="1" id="burgerId">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
                     <div class="nav__mobile" id="nav-mobile">
                         <ul class="nav_mobile--list">
-                            <li class="nav__list--item"><a href="#header">Home</a></li>
+                            <li class="nav__list--item" ><a href="#header">Home</a></li>
                             <li class="nav__list--item"><a href="#serviceinfo">Services</a></li>
                             <li class="nav__list--item">  <a href="#portfolio-block">Portfolio</a></li>
                             <li class="nav__list--item"><a href="#price-block">Pricing</a></li>
@@ -56,8 +56,9 @@
                         </ul>
                     </div>
 
-                    <div class="serch-img">
-                         <a href="_search.html" class="search-btn"><img src="img/serch-icon.png" alt=""></a>
+                    <div class="serch-img" tabindex="100">
+                         <a href="_search.html"  class="search-btn"><img src="img/serch-icon.png" alt=""></a>
+                         
                     </div>
                 </div> 
             </nav>
@@ -100,7 +101,9 @@
                 <div class="main-inform">
                     
                     <div class="block-service animate__animated animate__backInLeft animate__slow" >
-                        <div class="turn__over">Some text for example</div>
+                        <div class="turn__over">
+                            <span>Some text for example</span>
+                        </div>
                         <div class="card-img">
                             <img src="img/services1.png" alt="">
                         </div>
@@ -109,8 +112,8 @@
                         Navi davi. </p>
                     </div>
                     <div class="block-service animate__animated animate__backInLeft animate__fast" >
-                        <div class="turn__over">Some text for example 
-                            <br><a href="https://en.wikipedia.org/wiki/Design">Design</a>
+                        <div class="turn__over"><span> Some text for example 
+                            <br><a href="https://en.wikipedia.org/wiki/Design">Design</a></span>
                         </div>
                         <div class="card-img">
                             <img src="img/services2.png" alt="">
@@ -119,7 +122,9 @@
                         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada. </p>
                     </div>
                     <div class="block-service animate__animated animate__backInRight animate__fast" >
-                        <div class="turn__over">Some text for example</div>
+                        <div class="turn__over">
+                            <span>Some text for example</span>
+                        </div>
                         <div class="card-img">
                             <img src="img/services3.png" alt="">
                         </div>
@@ -130,7 +135,9 @@
                         
                     </div>
                     <div class="block-service animate__animated animate__backInRight animate__slow" >
-                        <div class="turn__over">-20%</div>
+                        <div class="turn__over">
+                            <span>-20%</span>
+                        </div>
                         <div class="card-img">
                             <img src="img/services4.png" alt="">
                         </div>
@@ -730,5 +737,6 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="libs/slick-1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/validate.js"></script>
 </body>
 </html>
