@@ -155,12 +155,44 @@ body {
   @media (min-width: 320px) and (max-width: 1124px) {
     .burger {
       display: flex;
-      margin: 25px 0px 0px 0px; } }
+      margin: 25px 0px 0px 0px;
+      justify-content: center; } }
+  .burger:hover {
+    background-color: rgba(13, 14, 13, 0.2);
+    box-shadow: 0px 0px 15px #0d0e0d; }
 
-.burger span {
+.burger span, .burger span:before, .burger span:after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
   width: 100%;
-  height: 3px;
-  background: #fff; }
+  height: 4px;
+  background: #fff;
+  display: block;
+  transition: .3s; }
+
+.burger span::after {
+  bottom: 12px;
+  transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.burger span::before {
+  top: 12px;
+  transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.burger span.active:before {
+  content: "";
+  top: 0px;
+  transform: rotate(45deg);
+  transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.burger span.active:after {
+  content: "";
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.burger span.active {
+  background: rgba(255, 255, 255, 0); }
 
 .nav-box > a {
   color: #c6c6c7;
@@ -312,7 +344,8 @@ body {
 .our-services {
   width: 100%;
   height: auto;
-  background: #282a2e; }
+  background: #282a2e;
+  overflow: hidden; }
 
 .header-services {
   font-size: 36px;
@@ -333,7 +366,7 @@ h5 {
       font-size: 18px; } }
   @media (min-width: 320px) and (max-width: 568px) {
     h5 {
-      font-size: 9px; } }
+      font-size: 15px; } }
 
 .main-inform > div > p {
   font-size: 13px;
@@ -418,7 +451,7 @@ h5 {
     transform: rotateY(180deg);
     display: block; }
 
-.block-service:hover .turn__over {
+.block-service:focus .turn__over {
   opacity: 1;
   visibility: visible;
   transform: rotateY(180deg); }
@@ -537,10 +570,23 @@ h5 {
   object-fit: cover; }
 
 .block-img8 {
-  position: relative; }
+  position: relative;
+  transition: transform 1s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   @media (min-width: 538px) and (max-width: 674px) {
     .block-img8 {
       width: 90%; } }
+  .block-img8:hover .box-comments {
+    opacity: 0.9; }
+  .block-img8:hover .close__content {
+    display: block;
+    cursor: pointer; }
+
+.hidden {
+  display: none; }
+
+.visuallyhiden {
+  opacity: 0; }
 
 .box-comments {
   color: #fff;
@@ -559,9 +605,6 @@ h5 {
   opacity: 0;
   transition-duration: .5s; }
 
-.box-comments:hover {
-  opacity: 0.9; }
-
 .box-comments > h6 {
   font-size: 18px; }
 
@@ -579,8 +622,8 @@ h5 {
 .block-like-comments > p {
   font-size: 14px; }
 
-.block-like-comments > p > img {
-  padding-right: 10px; }
+.block-like-comments > p > span {
+  padding-left: 10px; }
 
 .load-text {
   font-size: 1em;
@@ -596,6 +639,20 @@ h5 {
 .image {
   width: 100%;
   height: 200px; }
+
+.close__content {
+  max-width: 20px;
+  position: absolute;
+  top: 4px;
+  right: 3px;
+  display: none; }
+
+.close__foto {
+  display: none; }
+
+.close__item {
+  width: 20px;
+  height: 20px; }
 
 .our-price-block {
   width: 100%;
@@ -999,6 +1056,10 @@ h5 {
   height: auto;
   background: #282a2e; }
 
+@media (min-width: 320px) and (max-width: 568px) {
+  .section-header {
+    font-size: 24px; } }
+
 .form-container {
   margin-left: 130px;
   margin-right: 130px;
@@ -1031,28 +1092,28 @@ h5 {
   background-color: #424242;
   margin-top: 13px; }
 
-@media (min-width: 320px) and (max-width: 568px) {
+@media (min-width: 320px) and (max-width: 692px) {
   form {
     display: flex;
     flex-direction: column; } }
 
-form > input[type="text"] {
-  width: 46.6%;
+.input__data {
+  width: 46.2%;
   height: 35px;
   margin-top: 16px;
   background: #222327;
   color: #989898;
-  text-indent: 1em; }
-  @media (min-width: 320px) and (max-width: 568px) {
-    form > input[type="text"] {
+  text-indent: 0.5em; }
+  @media (min-width: 320px) and (max-width: 692px) {
+    .input__data {
       width: 95%; } }
-  form > input[type="text"]:focus::-webkit-input-placeholder {
+  .input__data:focus::-webkit-input-placeholder {
     text-indent: 500px;
     transition: text-indent 0.3s ease; }
 
 #mail-input {
   margin-left: 5px; }
-  @media (min-width: 320px) and (max-width: 568px) {
+  @media (min-width: 320px) and (max-width: 692px) {
     #mail-input {
       margin-left: 0; } }
 
@@ -1061,9 +1122,10 @@ textarea {
   margin-top: 16px;
   background: #222327;
   font-size: 20px;
-  text-indent: 1em;
+  text-indent: 0.5em;
   color: #989898;
-  height: 170px; }
+  height: 170px;
+  position: relative; }
   @media (min-width: 320px) and (max-width: 568px) {
     textarea {
       margin-top: 10px;
@@ -1129,6 +1191,9 @@ form > input[type="submit"] {
     color: inherit; }
   .btn_more_info:hover {
     opacity: 0.58; }
+  @media (min-width: 568px) and (max-width: 692px) {
+    .btn_more_info {
+      margin-top: 112px; } }
 
 .social-box {
   width: 100%;
@@ -1203,7 +1268,9 @@ video {
 
 footer {
   height: auto;
-  background: #282a2e; }
+  background: #282a2e;
+  display: flex;
+  flex-direction: column; }
 
 .footer-top {
   display: grid;
@@ -1212,7 +1279,7 @@ footer {
   margin-left: 130px;
   margin-right: 130px;
   padding-top: 70px;
-  margin-bottom: 60px; }
+  margin-bottom: 120px; }
   @media (min-width: 320px) and (max-width: 568px) {
     .footer-top {
       margin-left: 70px;
@@ -1328,11 +1395,11 @@ li > p > a:hover {
     .site-contact {
       display: block; } }
 
-.under-footer p {
+.myContact {
   color: #989898; }
-  .under-footer p a {
+  .myContact a {
     color: inherit; }
-    .under-footer p a:hover {
+    .myContact a:hover {
       text-decoration: underline; }
 
 @media (min-width: 320px) and (max-width: 568px) {
@@ -1389,3 +1456,11 @@ li > p > a:hover {
   .nav__list--item:hover, .nav__list--item:focus {
     box-shadow: 0px 0px 11px cadetblue;
     border-radius: 5px; }
+
+.invalid {
+  position: relative;
+  border: 2px solid #bc1b1e;
+  border-radius: 3px; }
+
+.done {
+  border: 2px solid #1bbc9d; }

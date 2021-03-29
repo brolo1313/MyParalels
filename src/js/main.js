@@ -54,22 +54,31 @@ document.addEventListener("DOMContentLoaded", function(){
 function checkscroll () {
   let scrollPos = window.scrollY;
   
-  if(scrollPos > 0 ){
-    fixedNavBar.classList.add('fixed');
-  }else {
-    fixedNavBar.classList.remove('fixed');
-  }
+
+  (scrollPos > 0 ) ? fixedNavBar.classList.add('fixed') : 
+                     fixedNavBar.classList.remove('fixed');
 }
+
+// бургер анимация 
+
+document.querySelector('.burger').addEventListener('click', function(){
+  document.querySelector('.burger span').classList.toggle('active');
+  
+})
+document.querySelector('.burger').addEventListener('blur', function(){
+  document.querySelector('.burger span').classList.remove('active');
+  
+})
 
 // навигация мобильная
 burger.addEventListener('click', function() {
   
-  if(navMobile.classList == 'nav__mobile'){
-    navMobile.classList.add ('active');
-  }else if (navMobile.classList == 'nav__mobile active') {
-    navMobile.classList.remove ('active');
-    
-  }
+    (navMobile.classList == 'nav__mobile') ? 
+          navMobile.classList.add ('active') : 
+          navMobile.classList.remove ('active');
+
+
+ 
 })
 
 burger.addEventListener('focusout', function(){
@@ -117,4 +126,33 @@ for(let anchor of anchors) {
 
 
 
-  //ТЕСТ ИСТОРИЯ
+  //ТЕСТ ЗАКРЫТЬ ФОТО В ПОРТФОЛИО
+
+  const imgPortfolio = document.querySelector('.block-img8');
+  const closeItem = document.querySelector('.close__content')
+
+ 
+  
+
+  closeItem.onclick = () => {
+    closeBlock();
+  }
+
+  function closeBlock() {
+
+    
+  
+
+    if(imgPortfolio.classList.contains('hidden')){
+      
+      setTimeout(function() {
+        imgPortfolio.classList.remove('visuallyhiden');
+      }, 20);
+      
+     }else {
+      imgPortfolio.classList.add('visuallyhiden');
+      imgPortfolio.addEventListener("transitionend" , function(e) {
+        imgPortfolio.classList.add('hidden');
+      })
+     }
+  }

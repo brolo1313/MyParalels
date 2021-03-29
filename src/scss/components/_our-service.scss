@@ -2,6 +2,7 @@
 	width: 100%;
 	height: auto;
 	background: #282a2e;
+	overflow: hidden;
 	
 }
 
@@ -25,7 +26,7 @@ h5{
 		font-size: 18px;
 	}
 	@media (min-width: 320px) and (max-width: 568px){
-		font-size: 9px;
+		font-size: 15px;
 	}
 
 }
@@ -160,7 +161,7 @@ h5{
 
 
 
-.block-service:hover .turn__over{
+.block-service:focus .turn__over{
     
 	opacity: 1;
     visibility: visible;

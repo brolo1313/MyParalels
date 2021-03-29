@@ -5,6 +5,12 @@
    
 }
 
+.section-header {
+    @media (min-width: 320px) and (max-width: 568px) {
+        font-size: 24px;
+    }
+}
+
 .form-container{
     margin-left: 130px;
     margin-right: 130px;
@@ -43,20 +49,24 @@
 }
 
 form{
-    @media (min-width: 320px) and (max-width: 568px){
+    @media (min-width: 320px) and (max-width: 692px){
     display: flex;
     flex-direction: column;
 }
    
 }
-form>input[type="text"]{
-   width: 46.6%;
+
+
+.input__data{
+   width: 46.2%;
    height: 35px;
    margin-top: 16px; 
-   background: #222327; 
+   
+   background: #222327;
+
    color: #989898;
-   text-indent: 1em;
-   @media (min-width: 320px) and (max-width: 568px){
+   text-indent: 0.5em;
+   @media (min-width: 320px) and (max-width: 692px){
     width: 95%;
    }
   
@@ -73,20 +83,26 @@ form>input[type="text"]{
 
 #mail-input{
     margin-left:5px;
-    @media (min-width: 320px) and (max-width: 568px){
+    @media (min-width: 320px) and (max-width: 692px){
         margin-left: 0;
     }
+
+  
     
 }
+
+
  
 textarea{
     width: 95%;
     margin-top: 16px;
     background: #222327;
     font-size: 20px;
-    text-indent: 1em;
+    text-indent: 0.5em;
     color: #989898;
     height: 170px;
+
+    position: relative;
     
     @media (min-width: 320px) and (max-width: 568px){
         margin-top: 10px;
@@ -96,9 +112,8 @@ textarea{
     &:focus::-webkit-input-placeholder  {opacity: 0; transition: opacity 0.3s ease;}
 }
 
-// textarea::placeholder{
-//     padding-top: 10px;
-// }
+
+
 
 form>input[type="submit"]{
     margin-top: 16px;
@@ -181,6 +196,10 @@ form>input[type="submit"]{
     &:hover {
         opacity: 0.58;
     }
+
+    @media (min-width: 568px) and (max-width: 692px){
+        margin-top: 112px;
+       }
 }
 
 
