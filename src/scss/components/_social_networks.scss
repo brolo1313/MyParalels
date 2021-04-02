@@ -64,6 +64,7 @@
     padding-top: 50px;
     justify-content: space-evenly;
     
+    
     height:200px;
     // margin-top: 35px;
     // padding-bottom: 100px;
@@ -79,7 +80,7 @@
 
 
     .social-networks>a{
-        
+       
         @media (min-width: 320px) and (max-width: 699px){
             align-self: center;
             
@@ -98,8 +99,9 @@ video{
 
 
 .social-networks > a:hover{
-    background: skyblue;
+    background: #099f60;
     
     border-radius: 50%;
-    border: 3px solid skyblue;
+    
+    // border: 3px solid #099f60;
 }

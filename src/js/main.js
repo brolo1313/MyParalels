@@ -4,6 +4,8 @@ const burger = document.getElementById ('burgerId');
 const fixedNavBar = document.querySelector ('.navbar')
 const tabsBtn = document.querySelectorAll ('.tabs__item');
 const tabsItems = document.querySelectorAll('.tabs-content');
+const body = document.querySelector('body');
+
 
 
 
@@ -129,30 +131,43 @@ for(let anchor of anchors) {
   //ТЕСТ ЗАКРЫТЬ ФОТО В ПОРТФОЛИО
 
   const imgPortfolio = document.querySelector('.block-img8');
-  const closeItem = document.querySelector('.close__content')
-
+  const closeItem = document.querySelector('.close__content');
+  const container = document.querySelector('.tabs-content')
  
   
 
-  closeItem.onclick = () => {
-    closeBlock();
-  }
+  container.onclick= function (event) {
+    if (event.target.className != 'close__item') return;
 
-  function closeBlock() {
+    let pane = event.target.closest('.block-img8');
+    pane.remove();
+  };
 
-    
-  
+//МОДАЛЬНОЕ ОКНО
 
-    if(imgPortfolio.classList.contains('hidden')){
-      
-      setTimeout(function() {
-        imgPortfolio.classList.remove('visuallyhiden');
-      }, 20);
-      
-     }else {
-      imgPortfolio.classList.add('visuallyhiden');
-      imgPortfolio.addEventListener("transitionend" , function(e) {
-        imgPortfolio.classList.add('hidden');
-      })
-     }
+  const modalBtn = document.querySelector(".write_me");
+  const modalShow = document.querySelector(".modal");
+  const modalMask = document.querySelector(".modal__mask")
+ 
+   
+  modalBtn.addEventListener ('click', function (){
+    if(modalShow.classList == 'modal'){
+      modalShow.classList.add('modal__open');
+      if(modalMask.classList == 'modal__mask'){
+        modalMask.classList.add('mask__open')
+        body.style.overflow = 'hidden';
+      }
+    }else {
+      modalMask.classList.remove('mask__open');
+      modalShow.classList.remove('modal__open');
+      body.style.overflow = 'auto';
+    }
+  })
+
+
+
+  modalMask.onclick = () => {
+    if(true)  modalShow.classList.remove('modal__open');
+              modalMask.classList.remove('mask__open');
+              body.style.overflow = 'auto';
   }
