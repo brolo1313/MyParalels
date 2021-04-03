@@ -1582,18 +1582,22 @@ li > p > a:hover {
   flex-flow: column;
   align-content: normal;
   padding: 30px 30px;
-  row-gap: 20px;
   background: rgba(136, 10, 151, 0.8);
   border-radius: 10px; }
   .modal__content input {
     border-radius: 5px;
-    line-height: 1.5;
-    text-indent: 5px; }
+    line-height: 1.7;
+    text-indent: 5px;
+    margin-top: 20px; }
     .modal__content input:focus::-webkit-input-placeholder {
       text-indent: 500px;
       transition: text-indent 0.7s ease; }
+    .modal__content input:focus {
+      box-shadow: 0px 0px 25px rgba(19, 18, 18, 0.938); }
+  .modal__content input:nth-child(4) {
+    margin-bottom: 20px; }
   .modal__content button {
-    padding: 5px 0;
+    padding: 10px 0;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.5s ease-in-out;
