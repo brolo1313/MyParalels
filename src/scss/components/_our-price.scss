@@ -100,6 +100,7 @@
 }
 
 .link-purchaise{
+    
     width: 130px;
     height: 45px;
     background-color: #b0cd3b;
@@ -127,7 +128,13 @@
 }
 .link-purchaise>a{
     color: #fff;
+    width: 100%;
+    display: block;
+    
 }
+
+
+
 
 // ВТОРАЯ ЧАСТЬ КАРТОЧЕК
 
@@ -228,130 +235,87 @@
     color:#74b0a4;
 
 }
-
+#first-link,
+#second-link,
+#third-link,
+#four-link{
+    //  outline-offset: -2px;
+    @keyframes bounce {
+        0%, 20%, 60%, 100% {
+            transform: translateY(0);
+            transform: translateY(0);
+        }
+    
+        40% {
+            transform: translateY(-20px);
+            transform: translateY(-20px);
+        }
+    
+        80% {
+            transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
+    }
+}
 
 
 
 #first-link{
     background-color: #e4e4e4;
     border-bottom: 3px solid #a7a7a7;
-    outline-offset: -2px;
+   
 
     &:hover {
         background-color: rgba(#a7a7a7, .9);
         animation: bounce 1s;
     }
 
-    @keyframes bounce {
-        0%, 20%, 60%, 100% {
-            transform: translateY(0);
-            transform: translateY(0);
-        }
     
-        40% {
-            transform: translateY(-20px);
-            transform: translateY(-20px);
-        }
-    
-        80% {
-            transform: translateY(-10px);
-            transform: translateY(-10px);
-        }
-    }
     
 }
 #first-link>a{
     color: #424242;
+    backface-visibility: hidden;
 }
 
 #second-link{
     background-color: #74b0a4;
     border-bottom: 3px solid #55857b;
-    outline-offset: -2px;
+    
 
     &:hover {
         background-color: rgba(#55857b, .9);
         animation: bounce 1s;
     }
 
-    @keyframes bounce {
-        0%, 20%, 60%, 100% {
-            transform: translateY(0);
-            transform: translateY(0);
-        }
-    
-        40% {
-            transform: translateY(-20px);
-            transform: translateY(-20px);
-        }
-    
-        80% {
-            transform: translateY(-10px);
-            transform: translateY(-10px);
-        }
-    }
+   
 }
 
 #third-link{
     background-color: #b6c380;
     border-bottom: 3px solid #8e9865;
-    outline-offset: -2px;
-
+    
     &:hover {
         background-color: rgba(#8e9865, .9);
         animation: bounce 1s;
     }
 
-    @keyframes bounce {
-        0%, 20%, 60%, 100% {
-            transform: translateY(0);
-            transform: translateY(0);
-        }
     
-        40% {
-            transform: translateY(-20px);
-            transform: translateY(-20px);
-        }
-    
-        80% {
-            transform: translateY(-10px);
-            transform: translateY(-10px);
-        }
-    }
 }
 #four-link{
     background-color: #424242;
     border-bottom: 3px solid #2d2d2d;
-    outline-offset: -2px;
     transition: opacity .3s ease-in-out;
 
     &:hover {
         opacity: 0.8;
         animation: bounce 1s;
-    }
-
-    @keyframes bounce {
-        0%, 20%, 60%, 100% {
-            transform: translateY(0);
-            transform: translateY(0);
-        }
-    
-        40% {
-            transform: translateY(-20px);
-            transform: translateY(-20px);
-        }
-    
-        80% {
-            transform: translateY(-10px);
-            transform: translateY(-10px);
-        }
-    }
+    } 
 }
 
 .about_us{
     margin-top: 70px;
-   
-    
+     
 }
 .header-about{
     position: relative;

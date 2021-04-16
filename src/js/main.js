@@ -56,9 +56,14 @@ document.addEventListener("DOMContentLoaded", function(){
 function checkscroll () {
   let scrollPos = window.scrollY;
   
+  if(scrollPos > 0 ){
+    fixedNavBar.classList.add('fixed');
+    
+  }
 
-  (scrollPos > 0 ) ? fixedNavBar.classList.add('fixed') : 
-                     fixedNavBar.classList.remove('fixed');
+  else {
+    fixedNavBar.classList.remove('fixed');
+  }
 }
 
 // бургер анимация 
@@ -171,3 +176,13 @@ for(let anchor of anchors) {
               modalMask.classList.remove('mask__open');
               body.style.overflow = 'auto';
   }
+
+
+
+ 
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
      <link rel="stylesheet"  href="libs/slick-1.8.1/slick/slick.css"/>
      <link rel="stylesheet"  href="libs/slick-1.8.1/slick/slick-theme.css"/>
      <link rel="stylesheet" href="css/all.css">
+    
    
     <title>Portfolio</title>
 </head>
@@ -16,6 +17,8 @@
 
     
 <div class="wrraper_all_page">
+    <!-- ARROW UP -->
+    
     <!-- ICON MODAL BUTTON -->
     
     <div class="write_me">
@@ -398,11 +401,13 @@
                     <img src="img/tabs/5.jpg" alt="" class="potrfolio-img">
                 </div>
             </div>
-            <div class="load-text">
-                    <h5 id="text-load-more" name="more">Load more</h5>
+            <div class="play__block">
+                  
+                <a href="https://www.youtube.com/watch?v=Iyh3OVZ560A" target="_blank"><label class="label__play" for="play">How we do foto :</label><br><img id="play" src="img/play2.png" alt=""></a>
                 
-                    <span class="arrow-portfolio" id="option" name="more"><img src="img/Arrow load more.png" alt=""></span>
-                </div> 
+                 
+                    
+            </div> 
 
         </section>
         
@@ -411,15 +416,11 @@
 
     <!-- SEPARATOR -->
 
-    <section class="separator ">
-        <div class="wrapper">
-            <div class="separator-bg">
-                <h1 class="separator-header">
-                    Insert whatever you want!
-                </h1>
-            </div>
+    <!-- <section class="video_container">
+        <div class="video__item">
+            <iframe  src="https://www.youtube.com/embed/Iyh3OVZ560A" height="350" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-    </section>
+    </section> -->
 
 
 
@@ -607,13 +608,94 @@
                             malesuada gravida. Sed quis neque condimentum, luctus augue in, dapibus sapien.</p>
                     </div>
                 </div>
-                <!-- <div>
+                
+                <div class="block__ourskills">
+                    <div class="progress_wrapper">
 
-                </div> -->
+                        <!-- FIRST BAR -->
+                        <div class="progresbar__container">
+                            <div class="progres__line">
+                                
+                                <span class="front" ></span>
+                            </div>
+        
+                            <div class="progres__percentage">
+                                35%
+                            </div>
+                            <div class="progres__text">
+                                web-design
+                            </div>
+                        </div>
+                        
+                        <!-- SECOND BAR -->
+                        <div class="progresbar__container">
+                            <div class="progres__line">
+                                
+                                <span class="front" ></span>
+                            </div>
+        
+                            <div class="progres__percentage">
+                                75%
+                            </div>
+                            <div class="progres__text">
+                                creative
+                            </div>
+                        </div>
+    
+                        <!-- THIRD BAR -->
+                        <div class="progresbar__container">
+                            <div class="progres__line">
+                                
+                                <span class="front"></span>
+                            </div>
+        
+                            <div class="progres__percentage">
+                                90%
+                            </div>
+                            <div class="progres__text">
+                                ui-design
+                            </div>
+                        </div>
+    
+                        <!-- FOUR BAR -->
+                        <div class="progresbar__container">
+                            <div class="progres__line">
+                                
+                                <span class="front"></span>
+                            </div>
+        
+                            <div class="progres__percentage">
+                                44%
+                            </div>
+                            <div class="progres__text">
+                                prototyps
+                            </div>
+                        </div>
+    
+                        <!-- LAST BAR -->
+                        <div class="progresbar__container">
+                            <div class="progres__line">
+                                
+                                <span class="front"></span>
+                            </div>
+        
+                            <div class="progres__percentage">
+                                99%
+                            </div>
+                            <div class="progres__text">
+                                photography
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                
             <!-- </div> -->
         </section>
     </div>
-    <section class="separator ">
+    <section class="animation__on">
         <div class="wrapper">
             <div class="separator-bg">
                 <h1 class="separator-header">
@@ -635,14 +717,14 @@
                         <span></span>
                         
                     </div>
-                    <form action="#">
+                    <form action="telegram.php" method="post">
                         
-                            <input class="input__data" type="text" placeholder="name" >
-                            <input class="input__data" type="email" id="mail-input" placeholder="example@mail.com" required 
-                            oninvalid="this.setCustomValidity('Обязательно укажите валидный email')" oninput="setCustomValidity('')">
-                            
-                            <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea><br>
-                            <input type="submit" name="" id="submit-btn" value="Submit">
+                        <input class="input__data" type="text" name="name" placeholder="name" required>
+                        <input class="input__data" type="email" name="email" id="mail-input" placeholder="example@mail.com" required 
+                        oninvalid="this.setCustomValidity('Обязательно укажите валидный email')" oninput="setCustomValidity('')">
+                        
+                        <textarea name="text" id="" cols="30" rows="10" placeholder="message"></textarea><br>
+                        <input type="submit" name="" id="submit-btn" value="Отправить">
                     </form>
                 </div>
                 <div class="more_info">
@@ -794,7 +876,9 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="libs/slick-1.8.1/slick/slick.min.js"></script>
+
 <script src="js/main.js"></script>
+<script src="js/sсroll.js"></script>
 <script src="js/validate.js"></script>
 </body>
 </html>
