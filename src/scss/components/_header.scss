@@ -71,7 +71,7 @@ body{
 	
 	
 	
-	@media (min-width: 320px) and (max-width: 1124px) {
+	@media (min-width: 320px) and (max-width: 1024px) {
 		
 		display: none;
 	  
@@ -115,7 +115,7 @@ body{
 
 	
 	cursor: pointer;
-	@media (min-width: 320px) and (max-width: 1124px) {
+	@media (min-width: 320px) and (max-width: 1024px) {
 		
 		display: flex;
 		margin: 25px 0px 0px 0px;
@@ -187,6 +187,10 @@ body{
 
 	
     padding: 0 20px;
+
+
+	display: flex;
+    align-items: center;
 	
 	
 }
@@ -203,8 +207,30 @@ body{
 	display: flex;
 	
 	background-color: #282a2e;
-	line-height: 80px;
+	
 	box-sizing: border-box;
+
+
+	
+	transition: all 1s;
+	
+
+}
+
+
+
+
+
+@keyframes fixedMenu {
+	0%{
+		height:0;
+	}
+	50%{
+		height: 100px;
+	}
+	100%{
+		height: 80px;
+	}
 
 }
 
@@ -215,12 +241,18 @@ body{
 	opacity:0.8;
 
 	max-width: 2000px;
+	
+	// animation:fixedMenu .8s forwards;
 }
 
 .serch-img{
 	width: 100%;
     margin: 0 auto;
     text-align: center;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+
 
 	cursor: pointer;
 

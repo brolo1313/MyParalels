@@ -122,7 +122,7 @@ body {
   width: 60%;
   display: flex;
   justify-content: space-around; }
-  @media (min-width: 320px) and (max-width: 1124px) {
+  @media (min-width: 320px) and (max-width: 1024px) {
     .nav-box {
       display: none; } }
 
@@ -152,7 +152,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer; }
-  @media (min-width: 320px) and (max-width: 1124px) {
+  @media (min-width: 320px) and (max-width: 1024px) {
     .burger {
       display: flex;
       margin: 25px 0px 0px 0px;
@@ -200,7 +200,9 @@ body {
   font-size: 1em;
   width: 100%;
   text-align: center;
-  padding: 0 20px; }
+  padding: 0 20px;
+  display: flex;
+  align-items: center; }
 
 .nav-box > a:hover, a:focus {
   color: #799941;
@@ -212,8 +214,16 @@ body {
   height: 80px;
   display: flex;
   background-color: #282a2e;
-  line-height: 80px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transition: all 1s; }
+
+@keyframes fixedMenu {
+  0% {
+    height: 0; }
+  50% {
+    height: 100px; }
+  100% {
+    height: 80px; } }
 
 .navbar.fixed {
   position: fixed;
@@ -225,6 +235,9 @@ body {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out ,box-shadow 0.2s ease-in-out; }
   .serch-img:hover, .serch-img:focus {
@@ -491,6 +504,20 @@ h5 {
   @media (min-width: 320px) and (max-width: 568px) {
     .separator-bg > h1 {
       font-size: 25px; } }
+
+section#serviceinfo::before {
+  content: '';
+  display: block;
+  height: 7vh;
+  margin-top: -7vh;
+  visibility: hidden; }
+
+section#about-block::before {
+  content: '';
+  display: block;
+  height: 7vh;
+  margin-top: -7vh;
+  visibility: hidden; }
 
 .portfolio {
   height: auto;

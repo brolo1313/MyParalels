@@ -61,8 +61,9 @@ function checkscroll () {
     
   }
 
-  else {
+  else if(scrollPos < 100 ) {
     fixedNavBar.classList.remove('fixed');
+    
   }
 }
 

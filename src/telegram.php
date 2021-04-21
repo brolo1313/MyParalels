@@ -6,13 +6,15 @@
 $name = $_POST['name'];
 $email = $_POST['email'];
 $text = $_POST['text'];
+$phone = $_POST['phone'];
 
 $token = "1733019307:AAHVZjZb8mD95UCsIeqo2OrDrBMyame5qjU";
 $chat_id = "-356258135";
 $arr = array(
     'Имя пользователя :' => $name,
     'Email :' => $email,
-    'ТЕКСТ :' => $text
+    'ТЕКСТ :' => $text,
+    'PHONE :' => $phone
     
 );
 foreach($arr as $key => $value) {
@@ -23,9 +25,12 @@ foreach($arr as $key => $value) {
 
   if ($sendToTelegram) {
     header('Location: thank-you.html');
+    exit;
     // echo "Спасибо";
   } else {
     echo "Error";
+
+
   }
 
 

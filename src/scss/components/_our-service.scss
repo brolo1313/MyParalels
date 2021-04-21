@@ -221,3 +221,18 @@ h5{
 }
 
 
+section#serviceinfo::before {
+    content: '';
+    display: block;
+    height: 7vh;
+    margin-top: -7vh;
+    visibility: hidden;
+}
+
+section#about-block::before {
+    content: '';
+    display: block;
+    height: 7vh;
+    margin-top: -7vh;
+    visibility: hidden;
+}

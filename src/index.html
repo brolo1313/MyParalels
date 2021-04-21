@@ -36,19 +36,19 @@
     <div class="modal__mask"></div>
 
 
-    <div class="modal" >
+    <form class="modal" action="" method="" >
         <div class="modal__content">
             <div class="modal__header">
                 <h3>Оставьте свои данные и мы свами свяжемся</h3>
             </div>
-            <input type="text" placeholder="Ваше имя">
-            <input type="email" placeholder="Ваш email">
-            <input type="phone" placeholder="+380631112233">
+            <input type="text" placeholder="Ваше имя" name="name">
+            <input type="email" placeholder="Ваш email" name="email">
+            <input type="phone" placeholder="+380631112233" name="phone">
 
             <button class="modal__btn" type="submit">Отправить</button>
 
         </div>
-    </div>
+    </form>
 
 
     
@@ -717,7 +717,7 @@
                         <span></span>
                         
                     </div>
-                    <form action="telegram.php" method="post">
+                    <form action="" method="">
                         
                         <input class="input__data" type="text" name="name" placeholder="name" required>
                         <input class="input__data" type="email" name="email" id="mail-input" placeholder="example@mail.com" required 
