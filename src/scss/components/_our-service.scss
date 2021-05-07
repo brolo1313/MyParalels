@@ -2,7 +2,7 @@
 	width: 100%;
 	height: auto;
 	background: #282a2e;
-	overflow: hidden;
+	
 	
 }
 
@@ -224,15 +224,35 @@ h5{
 section#serviceinfo::before {
     content: '';
     display: block;
-    height: 7vh;
-    margin-top: -7vh;
+    height: 80px;
+    margin-top: -80px;
+    visibility: hidden;
+}
+
+
+
+section#portfolio-block::before {
+    content: '';
+    display: block;
+    height: 80px;
+    margin-top: -80px;
+    visibility: hidden;
+}
+
+section#price-block::before {
+    content: '';
+    display: block;
+    height: 80px;
+    margin-top: -80px;
     visibility: hidden;
 }
 
 section#about-block::before {
     content: '';
     display: block;
-    height: 7vh;
-    margin-top: -7vh;
+    height: 80px;
+    margin-top: -80px;
     visibility: hidden;
 }
+
+

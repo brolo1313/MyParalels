@@ -142,25 +142,26 @@ li>p>a:hover{
 .under-footer{
     width:100% ;
     display: flex;
-    padding-top: 57px;
-    padding-bottom: 57px;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 30px;
     @media (min-width: 777px) and (max-width: 1124px) {
 		padding-top: 27px;
         padding-bottom: 27px;
     }
-    @media (min-width: 320px) and (max-width: 568px){
-        margin: 0 auto;
-        width: 100%;
-        padding-top: 30px;
-        padding-bottom: 30px;
+    // @media (min-width: 320px) and (max-width: 568px){
+    //     // margin: 0 auto;
+    //     // width: 100%;
+    //     padding-top: 30px;
+    //     padding-bottom: 30px;
         
         
-    }
+    // }
     
 }
 .logo-box__footer{
     
-        margin-left: 50px;
+        // margin-left: 50px;
         display: flex;
         align-items: center;
     
@@ -169,7 +170,7 @@ li>p>a:hover{
 .site-contact{
    display: flex;
    justify-content: flex-end;
-   margin: 0 45px 0 auto;
+//    margin: 0 45px 0 auto;
    gap: 2.2em;
    @media (min-width: 777px) and (max-width: 1124px) {
     

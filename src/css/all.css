@@ -358,8 +358,7 @@ body {
 .our-services {
   width: 100%;
   height: auto;
-  background: #282a2e;
-  overflow: hidden; }
+  background: #282a2e; }
 
 .header-services {
   font-size: 36px;
@@ -508,15 +507,29 @@ h5 {
 section#serviceinfo::before {
   content: '';
   display: block;
-  height: 7vh;
-  margin-top: -7vh;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden; }
+
+section#portfolio-block::before {
+  content: '';
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden; }
+
+section#price-block::before {
+  content: '';
+  display: block;
+  height: 80px;
+  margin-top: -80px;
   visibility: hidden; }
 
 section#about-block::before {
   content: '';
   display: block;
-  height: 7vh;
-  margin-top: -7vh;
+  height: 80px;
+  margin-top: -80px;
   visibility: hidden; }
 
 .portfolio {
@@ -529,7 +542,8 @@ section#about-block::before {
 .portfolio > h3 {
   text-align: center;
   color: #d4d4d5;
-  font-size: 36px; }
+  font-size: 36px;
+  padding-top: 0px; }
 
 @media (min-width: 777px) and (max-width: 1124px) {
   #portfolio-header {
@@ -1054,6 +1068,22 @@ section#about-block::before {
 .card-people > div > span {
   color: #e9eaea; }
 
+.about-header {
+  font-size: 36px;
+  color: #f4f4f4;
+  text-align: center;
+  padding-bottom: 45px; }
+
+.separator__item {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  height: 2px;
+  background: #4b3f34; }
+
+.separator__block {
+  background: #282a2e; }
+
 .contact-us {
   width: 100%;
   height: auto;
@@ -1101,9 +1131,8 @@ section#about-block::before {
     flex-direction: column; } }
 
 .input__data {
-  width: 46.2%;
+  width: 47%;
   height: 35px;
-  margin-top: 16px;
   background: #222327;
   color: #989898;
   text-indent: 0.5em; }
@@ -1116,9 +1145,32 @@ section#about-block::before {
 
 #mail-input {
   margin-left: 5px; }
-  @media (min-width: 320px) and (max-width: 692px) {
+  @media (min-width: 320px) and (max-width: 1079px) {
     #mail-input {
       margin-left: 0; } }
+  @media (min-width: 320px) and (max-width: 692px) {
+    #mail-input {
+      margin-top: 15px; } }
+
+#mail-input + label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; }
+
+#mail-input + label:before {
+  content: "\2709";
+  position: absolute;
+  left: -1.4em;
+  top: -0.75em;
+  font-size: 23px;
+  color: #eeeeee; }
+
+#mail-input:hover + label:before, #mail-input:focus + label:before {
+  color: #dcc8c8; }
+
+#mail-input.test:before {
+  content: "123";
+  color: #139413; }
 
 textarea {
   width: 95%;
@@ -1363,28 +1415,21 @@ li > p > a:hover {
 .under-footer {
   width: 100%;
   display: flex;
-  padding-top: 57px;
-  padding-bottom: 57px; }
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 30px; }
   @media (min-width: 777px) and (max-width: 1124px) {
     .under-footer {
       padding-top: 27px;
       padding-bottom: 27px; } }
-  @media (min-width: 320px) and (max-width: 568px) {
-    .under-footer {
-      margin: 0 auto;
-      width: 100%;
-      padding-top: 30px;
-      padding-bottom: 30px; } }
 
 .logo-box__footer {
-  margin-left: 50px;
   display: flex;
   align-items: center; }
 
 .site-contact {
   display: flex;
   justify-content: flex-end;
-  margin: 0 45px 0 auto;
   gap: 2.2em; }
   @media (min-width: 777px) and (max-width: 1124px) {
     .site-contact {
@@ -1465,7 +1510,11 @@ li > p > a:hover {
   border-radius: 3px; }
 
 .done {
-  border: 2px solid #1bbc9d; }
+  border: 2px solid green; }
+
+.span {
+  padding: 10px 0;
+  transition: all .30s ease-in-out; }
 
 .modal__mask {
   visibility: hidden;

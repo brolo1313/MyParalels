@@ -41,9 +41,22 @@
             <div class="modal__header">
                 <h3>Оставьте свои данные и мы свами свяжемся</h3>
             </div>
-            <input type="text" placeholder="Ваше имя" name="name">
-            <input type="email" placeholder="Ваш email" name="email">
-            <input type="phone" placeholder="+380631112233" name="phone">
+            <input id="modal_name" 
+                   type="text" 
+                   placeholder="Ваше имя" 
+                   name="name" 
+                   pattern="[A-Za-zА-Яа-яЁё]{2,15}"
+                   required>
+            <input id="modal_email"
+                   type="email" 
+                   placeholder="Ваш email"
+                   pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                   name="email" required>
+            <input id="modal_phone"
+                   type="phone" 
+                   placeholder="+380631112233" 
+                   pattern="^[+380\d{3}\d{2}\d{2}\d{2}]$"
+                   name="phone" required>
 
             <button class="modal__btn" type="submit">Отправить</button>
 
@@ -93,11 +106,12 @@
                             <li class="nav__list--item"><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
-
-                    <div class="serch-img" tabindex="100">
-                         <a href="_search.html"  class="search-btn"><img src="img/serch-icon.png" alt=""></a>
-                         
+                    
+                        <div class="serch-img" tabindex="100">
+                                <a href="_search.html"  class="search-btn"><img src="img/serch-icon.png" alt=""></a>  
                     </div>
+                    
+                    
                 </div> 
             </nav>
             <div class="header-slider">
@@ -578,7 +592,7 @@
         <!-- ABOUT US SECTION -->
     <div class="wrapper">
         <section class="about-us" id="about-block">
-            <h3 class="section-header">About Us</h3>
+            <h3 class="about-header">About Us</h3>
             <!-- <div class="about-content"> -->
                 <div class="card-people">
                     <div>
@@ -695,14 +709,12 @@
             <!-- </div> -->
         </section>
     </div>
-    <section class="animation__on">
-        <div class="wrapper">
-            <div class="separator-bg">
-                <h1 class="separator-header">
-                    Insert whatever you want!
-                </h1>
-            </div>
-        </div>
+    <section class="separator">
+       <div class="separator__block">
+            <span class="separator__item"></span>
+       </div>
+            
+        
     </section>
     <!-- CONTACT US   -->
 
@@ -713,15 +725,18 @@
             <div class="form-container">
                 <div class="user_data">
                     <h5>MAIL</h5>
-                    <div class="separator-footer">
-                        <span></span>
+                    
+                    <form action="" method="" >
+                        <div class="separator-footer">
+                            <span></span>
+                        </div>
+                        <div class="block__input">
+                            <div class="span"></div>
+                            <input class="input__data animate__animated" type="text" minlength="2" maxlength="20" name="name" id="name-input" placeholder="ИМЯ" title="Любая буква русского и латинского алфавита."   > 
+                            <input class="input__data animate__animated"  type="email" name="email" id="mail-input" placeholder="example@mail.com"   >
+                            <label class="testOne" for="mail-input"></label>
+                        </div>
                         
-                    </div>
-                    <form action="" method="">
-                        
-                        <input class="input__data" type="text" name="name" placeholder="name" required>
-                        <input class="input__data" type="email" name="email" id="mail-input" placeholder="example@mail.com" required 
-                        oninvalid="this.setCustomValidity('Обязательно укажите валидный email')" oninput="setCustomValidity('')">
                         
                         <textarea name="text" id="" cols="30" rows="10" placeholder="message"></textarea><br>
                         <input type="submit" name="" id="submit-btn" value="Отправить">
