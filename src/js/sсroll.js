@@ -1,7 +1,7 @@
  // СКРОЛ АНИМАЦИЯ НА БЛОКЕ ANIMATION ON
 
  let animationOnBlock = document.querySelector('.animation__on');
- let progressBar = document.querySelectorAll('.front');
+ let progressBar = document.querySelector('.front');
  let blockSkills = document.querySelector('.block__ourskills')
 
 
@@ -22,10 +22,34 @@
        });
    };
 
- scrollAnimation();
+//  scrollAnimation();
  
 
-//  window.addEventListener('scroll', () => {
-   
-//        scrollAnimation();
-//    });
+
+
+
+
+// const callbackFunction = function(entries) {
+//     console.log(entries[0]);
+// }
+
+// const observer = new IntersectionObserver(callbackFunction,{
+//     threshold:[0.5]
+// });
+
+// observer.observe(blockSkills);
+
+const observer = new IntersectionObserver((entries) => {
+    console.log(entries);
+
+    if(entries[0].intersectionRatio > 0) {
+        entries[0].target.style.animation = 'rotate-one 2s forwards easy-out';
+
+    }
+    else {
+        entries[0].target.style.animation = 'none'
+    }
+})
+
+
+observer.observe(blockSkills)

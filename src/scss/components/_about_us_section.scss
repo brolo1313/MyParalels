@@ -33,7 +33,14 @@
 }
 .card-people>div>img{
     width: 95%;
+    filter: grayscale(100%);
 }
+
+.card-people>div>img:hover{
+    filter: grayscale(0%);
+}
+
+
 .card-people>div>p{
     width: 95%;
     color: #989899;

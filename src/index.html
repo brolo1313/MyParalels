@@ -34,8 +34,6 @@
 
     <!-- MODAL BLOCK -->
     <div class="modal__mask"></div>
-
-
     <form class="modal" action="" method="" >
         <div class="modal__content">
             <div class="modal__header">
@@ -46,28 +44,30 @@
                    placeholder="Ваше имя" 
                    name="name" 
                    pattern="[A-Za-zА-Яа-яЁё]{2,15}"
-                   required>
+                   required
+                   title="только буквы руского или латинского алфавита"
+                   >
             <input id="modal_email"
                    type="email" 
                    placeholder="Ваш email"
                    pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
-                   name="email" required>
+                   name="email" 
+                   required
+                   title="пример: youremail@gmail.com">
             <input id="modal_phone"
-                   type="phone" 
+                   type="tel" 
                    placeholder="+380631112233" 
-                   pattern="^[+380\d{3}\d{2}\d{2}\d{2}]$"
-                   name="phone" required>
-
+                   pattern="^\+380\d{9}$"
+                   name="phone" required
+                   title="пример: +380635152233">
+                   
+                   
             <button class="modal__btn" type="submit">Отправить</button>
 
         </div>
     </form>
 
-
-    
-
     <!-- HEADER -->
-
     <header class="header" id="header">
     	<div class="wrapper">
             <nav class="navbar ">
@@ -90,29 +90,33 @@
                     <a href="#about-block">About</a>
                     <a href="#contact">Contact</a>
                 </div>
+                <div class="serch-img" tabindex="100">
+                    <a href="_search.html"  class="search-btn"><img src="img/serch-icon.png" alt=""></a>  
+                </div>
                 <div class="nav-hidden" >
                     <div class="burger" tabindex="1" id="burgerId">
                         
                         <span ></span>
-                        
+                        <div class="nav__mobile" id="nav-mobile">
+                            <ul class="nav_mobile--list">
+                                <li class="nav__list--item" ><a href="#header">Home</a></li>
+                                <li class="nav__list--item"><a href="#serviceinfo">Services</a></li>
+                                <li class="nav__list--item">  <a href="#portfolio-block">Portfolio</a></li>
+                                <li class="nav__list--item"><a href="#price-block">Pricing</a></li>
+                                <li class="nav__list--item"><a href="#about-block">About</a></li>
+                                <li class="nav__list--item"><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="nav__mobile" id="nav-mobile">
-                        <ul class="nav_mobile--list">
-                            <li class="nav__list--item" ><a href="#header">Home</a></li>
-                            <li class="nav__list--item"><a href="#serviceinfo">Services</a></li>
-                            <li class="nav__list--item">  <a href="#portfolio-block">Portfolio</a></li>
-                            <li class="nav__list--item"><a href="#price-block">Pricing</a></li>
-                            <li class="nav__list--item"><a href="#about-block">About</a></li>
-                            <li class="nav__list--item"><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
+                   
                     
-                        <div class="serch-img" tabindex="100">
+                        <!-- <div class="serch-img" tabindex="100">
                                 <a href="_search.html"  class="search-btn"><img src="img/serch-icon.png" alt=""></a>  
-                    </div>
+                        </div> -->
                     
                     
                 </div> 
+
             </nav>
             <div class="header-slider">
                 <div class="text-block">
@@ -142,9 +146,7 @@
       
     </header>
 
-
     <!-- OUR SERVICES -->
-
     <div class="wrapper">
         <section class="our-services" id="serviceinfo">
             <!-- <div class="wrapper"> -->
@@ -427,18 +429,6 @@
         
     </div>
     
-
-    <!-- SEPARATOR -->
-
-    <!-- <section class="video_container">
-        <div class="video__item">
-            <iframe  src="https://www.youtube.com/embed/Iyh3OVZ560A" height="350" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section> -->
-
-
-
-
     <!-- OUR PRICES -->
     <div class="wrapper">
         <section class="our-price" id="price-block">
@@ -576,8 +566,8 @@
         
         </section>
     </div>
+    
     <!-- SEPARATOR -->
-
     <section class="separator ">
         <div class="wrapper">
             <div class="separator-bg">
@@ -588,34 +578,33 @@
         </div>
     </section>
 
-
-        <!-- ABOUT US SECTION -->
+     <!-- ABOUT US SECTION -->
     <div class="wrapper">
         <section class="about-us" id="about-block">
             <h3 class="about-header">About Us</h3>
             <!-- <div class="about-content"> -->
                 <div class="card-people">
                     <div>
-                        <img src="img/about us/1.png" alt="">
+                        <img src="img/about us/1.png" alt="" >
                         <h5>Mark Cream</h5>
                         <span>Developer</span>
                         <p>Curabitur congue libero mi, et lacinia sem blandit sit amet. Donec eu mi non magna rhoncus bibendum et eu dui. Nunc iaculis placerat sapien vel imperdiet. </p>
                     </div>
                     <div>
-                        <img src="img/about us/2.png" alt="">
+                        <img src="img/about us/2.png" alt="" >
                         <h5>Antonio Paromo</h5>
                         <span>Fire Efects</span>
                         <p>Etiam pulvinar libero et scelerisque cursus. Sed eu nisl congue, gravida urna imperdiet, laoreet dolor. Morbi adipiscing neque erat, tincidunt 
                             porttitor est vestibulum ac. </p>
                     </div>
                     <div>
-                        <img src="img/about us/3.png" alt="">
+                        <img src="img/about us/3.png" alt="" >
                         <h5>Mario Ballote</h5>
                         <span>Big Boss</span>
                         <p>Donec at pulvinar dolor, et lobortis est. Phasellus nibh nisi, blandit non velit sit amet, pulvinar vehicula nulla.</p>
                     </div>
                     <div>
-                        <img src="img/about us/4.png" alt="">
+                        <img src="img/about us/4.png" alt="" >
                         <h5>Ben Bugatton</h5>
                         <span>Designr</span>
                         <p>Mauris dignissim felis quis justo 
@@ -628,7 +617,7 @@
 
                         <!-- FIRST BAR -->
                         <div class="progresbar__container">
-                            <div class="progres__line">
+                            <div class="progres__line" >
                                 
                                 <span class="front" ></span>
                             </div>
@@ -796,7 +785,6 @@
             </div>
         </section>
     </div>
-
 
     <!-- FOOTER  -->
     <div class="wrapper">

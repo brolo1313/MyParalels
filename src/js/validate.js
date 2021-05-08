@@ -77,21 +77,4 @@ mailInput.onblur=function(){
 
 
 
-// MODAL VALIDATE
-
-
-const modalName = document.getElementById('modal_name');
-const modalEmail = document.getElementById('modal_email');
-const modalPhone = document.getElementById('modal_phone');
-
-
-
-
-modalName.oninvalid = function(event) {
-  event.target.setCustomValidity('только буквы руского или латинского алфавита');
-}
-
-modalEmail.oninvalid = function(event) {
-  event.target.setCustomValidity('пример: youremail@gmail.com');
-}
 
