@@ -23,6 +23,7 @@
     "gulp-sass": "^4.1.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^4.1.1"
   }
 }

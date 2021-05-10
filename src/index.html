@@ -8,6 +8,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
      <link rel="stylesheet"  href="libs/slick-1.8.1/slick/slick.css"/>
      <link rel="stylesheet"  href="libs/slick-1.8.1/slick/slick-theme.css"/>
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
      <link rel="stylesheet" href="css/all.css">
     
    
@@ -153,7 +154,7 @@
                 <h3 class="header-services">Our services</h3>
                 <div class="main-inform">
                     
-                    <div class="block-service animate__animated animate__backInLeft animate__slow" tabindex="0" >
+                    <div class="block-service animate__animated  animate__backInLeft animate__slow" tabindex="0" >
                         <div class="turn__over">
                             <span>Some text for example</span>
                         </div>
@@ -187,7 +188,7 @@
                         
                         
                     </div>
-                    <div class="block-service animate__animated animate__backInRight animate__slow" tabindex="0" >
+                    <div class="block-service animate__animated  animate__backInRight animate__slow" tabindex="0" >
                         <div class="turn__over">
                             <span>-20%</span>
                         </div>
@@ -584,27 +585,27 @@
             <h3 class="about-header">About Us</h3>
             <!-- <div class="about-content"> -->
                 <div class="card-people">
-                    <div>
-                        <img src="img/about us/1.png" alt="" >
+                    <div class="block_card">
+                        <img src="img/about us/1.png" loading="lazy" alt="" >
                         <h5>Mark Cream</h5>
                         <span>Developer</span>
                         <p>Curabitur congue libero mi, et lacinia sem blandit sit amet. Donec eu mi non magna rhoncus bibendum et eu dui. Nunc iaculis placerat sapien vel imperdiet. </p>
                     </div>
-                    <div>
-                        <img src="img/about us/2.png" alt="" >
+                    <div class="block_card">
+                        <img src="img/about us/2.png" loading="lazy" alt="" >
                         <h5>Antonio Paromo</h5>
                         <span>Fire Efects</span>
                         <p>Etiam pulvinar libero et scelerisque cursus. Sed eu nisl congue, gravida urna imperdiet, laoreet dolor. Morbi adipiscing neque erat, tincidunt 
                             porttitor est vestibulum ac. </p>
                     </div>
-                    <div>
-                        <img src="img/about us/3.png" alt="" >
+                    <div class="block_card">
+                        <img src="img/about us/3.png" loading="lazy" alt="" >
                         <h5>Mario Ballote</h5>
                         <span>Big Boss</span>
                         <p>Donec at pulvinar dolor, et lobortis est. Phasellus nibh nisi, blandit non velit sit amet, pulvinar vehicula nulla.</p>
                     </div>
-                    <div>
-                        <img src="img/about us/4.png" alt="" >
+                    <div class="block_card">
+                        <img src="img/about us/4.png" loading="lazy" alt="" >
                         <h5>Ben Bugatton</h5>
                         <span>Designr</span>
                         <p>Mauris dignissim felis quis justo 
@@ -721,7 +722,7 @@
                         </div>
                         <div class="block__input">
                             <div class="span"></div>
-                            <input class="input__data animate__animated" type="text" minlength="2" maxlength="20" name="name" id="name-input" placeholder="ИМЯ" title="Любая буква русского и латинского алфавита."   > 
+                            <input class="input__data animate__animated" type="text"  name="name" id="name-input" placeholder="ИМЯ" title="Любая буква русского и латинского алфавита."   > 
                             <input class="input__data animate__animated"  type="email" name="email" id="mail-input" placeholder="example@mail.com"   >
                             <label class="testOne" for="mail-input"></label>
                         </div>
@@ -835,7 +836,36 @@
                     </h5>
                     <div class="separator-footer " id="separator_mail"><span></span></div>
                     <div class="foto-protfolio">
-                        <img src="img/footerimg/1.png" alt="">
+                        <p class="imglist">
+                            <a href="img/footerimg/1.jpg" data-fancybox="images" >
+                                <img src="img/footerimg/1.jpg" />
+                            </a>
+                            <a href="img/footerimg/2.jpg" data-fancybox="images"  >
+                                <img src="img/footerimg/2.jpg" />
+                            </a>
+                            <a href="img/footerimg/3.jpg" data-fancybox="images" >
+                                <img src="img/footerimg/3.jpg" />
+                            </a>
+                            <a href="img/footerimg/4.jpg" data-fancybox="images" >
+                                <img src="img/footerimg/4.jpg" />
+                            </a>
+                            <a href="img/footerimg/5.jpg" data-fancybox="images" >
+                                <img src="img/footerimg/5.jpg" />
+                            </a>
+                            <a href="img/footerimg/6.jpg" data-fancybox="images" >
+                                <img src="img/footerimg/6.jpg" />
+                            </a>
+                            <a href="img/footerimg/7.png" data-fancybox="images" >
+                                <img src="img/footerimg/7.png" />
+                            </a>
+                            <a href="img/footerimg/8.jpg" data-fancybox="images" >
+                                <img src="img/footerimg/8.jpg" />
+                            </a>
+                        </p>
+                        <br><br>
+                       
+                      
+                        <!-- <img src="img/footerimg/1.png" alt="">
                         <img src="img/footerimg/2.png" alt="">
                         <img src="img/footerimg/3.png" alt="">
                         <img src="img/footerimg/4.png" alt="">
@@ -844,7 +874,7 @@
                         <img src="img/footerimg/7.png" alt="">
                         <img src="img/footerimg/8.png" alt="">
                         <img src="img/footerimg/9.png" alt="">
-                        <img src="img/footerimg/10.png" alt="">
+                        <img src="img/footerimg/10.png" alt=""> -->
                     </div>
                 </div>
             </div>
@@ -878,10 +908,12 @@
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="libs/slick-1.8.1/slick/slick.min.js"></script>
 
 <script src="js/main.js"></script>
 <script src="js/sсroll.js"></script>
 <script src="js/validate.js"></script>
+
 </body>
 </html>

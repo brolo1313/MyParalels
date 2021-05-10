@@ -1,10 +1,10 @@
  // СКРОЛ АНИМАЦИЯ НА БЛОКЕ ANIMATION ON
 
- let animationOnBlock = document.querySelector('.animation__on');
- let progressBar = document.querySelector('.front');
+ let animationOnBlock = document.querySelectorAll('.block_card');
+ let progressBar = document.querySelectorAll('.front');
  let blockSkills = document.querySelector('.block__ourskills')
-
-
+ let blockService = document.querySelectorAll('.block-service');
+ 
 
  const scrollAnimation = () => {
        let windowCenter = (window.innerHeight / 2) + window.scrollY;
@@ -39,17 +39,58 @@
 
 // observer.observe(blockSkills);
 
-const observer = new IntersectionObserver((entries) => {
-    console.log(entries);
 
-    if(entries[0].intersectionRatio > 0) {
-        entries[0].target.style.animation = 'rotate-one 2s forwards easy-out';
+// анимация about us progress line
 
-    }
-    else {
-        entries[0].target.style.animation = 'none'
-    }
+ observer = new IntersectionObserver((entries) => {
+    console.log(entries[0]);
+    // console.log(progressBar);
+    entries.forEach(entry =>  {
+        if(entry.isIntersecting === true) {
+            // entries[0].target.style.animation = 'rotate-one 3s forwards ease-out';
+            entry.target.classList.add ('anim__on');
+            entry.target.webkitAnimationPlayState="running";
+           
+        }
+        else {
+            entry.target.classList.remove ('anim__on');
+            // blockSkills.parentNode.removeChild(blockSkills);
+        }
+       })
+    })
+
+
+
+
+progressBar.forEach(progress => {
+    observer.observe(progress)
 })
 
 
-observer.observe(blockSkills)
+
+
+observer = new IntersectionObserver((entries) => {
+    console.log(entries[0]);
+    // console.log(progressBar);
+    entries.forEach(entry =>  {
+        if(entry.isIntersecting === true) {
+            entry.target.style.animation = 'rotate-one 3s forwards ease-out';
+       
+        }
+        else {
+            entry.target.style.animation = 'none';
+            
+        }
+       })
+    })
+
+
+
+
+//     progresLine.forEach(animation => {
+//     observer.observe(animation)
+// })
+
+
+
+

@@ -16,26 +16,24 @@ footer{
     margin-right: 130px;
     padding-top: 70px;
     margin-bottom: 120px;
-    // @media (min-width: 777px) and (max-width: 1124px){
-    //     gap:1.5em;
-    // }
-    // @media (min-width: 320px) and (max-width: 568px){
-    //     margin: 0 auto;
-    //     display: grid;
-    //     grid-template-columns: repeat(3, 30%);
-    //     grid-column-gap: 10px;
-    // }
+  
     @media (min-width: 320px) and (max-width: 568px){
     margin-left: 70px;
     margin-right: 70px;
     margin-bottom: 110px;
     
     }
-    @media (min-width: 568px) and (max-width: 680px){
-        margin-bottom: 120px;
+    @media (min-width: 568px) and (max-width: 767px){
+        margin-bottom: 80px;
     }
 }
 
+.footer-top div:nth-child(3){
+    @media (max-width: 767px){
+        display:none;
+    }
+       
+}
 
 .footer-column{
     width: 100%;
@@ -45,11 +43,7 @@ footer{
         
     }
 }
-.footer-column > .separator-footer {
-    width: 100%;
-    height: 3px;
-    background: #424242; 
-}
+
 
 .column-header{
     color: #fff;
@@ -87,11 +81,6 @@ li>p>a:hover{
 
 
 
-
-
-
-
-
 .twiter-box>li::before{
     content: '';
     background-image: url(../img/footerimg/twitter.png) ;
@@ -107,6 +96,7 @@ li>p>a:hover{
 }
 
 #separator_mail{
+    width: inherit;
     background: #ddd;
     margin-bottom: 15px;
     height: 2px;
@@ -121,20 +111,21 @@ li>p>a:hover{
 }
 
 .foto-protfolio{
-    width: 90%;
+    width: inherit;
     display: grid;
-    grid-template-columns: 24% 24% 24% 24%;
-    grid-template-rows: 30% 30% 30%;
-    grid-gap: 10px;
-    @media (min-width: 777px) and (max-width: 1124px){
-     width: 87%;   
-    }
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.333% 33.333% 33.333%;
+    
+   
 }
 
-// .foto-protfolio > img {
-//     width: 100px;
-//     height: 100px;
-// }
+.imglist {
+    display:contents;
+}
+
+
+
+
 .footer-down{
     background: #222327;
 }
@@ -149,15 +140,7 @@ li>p>a:hover{
 		padding-top: 27px;
         padding-bottom: 27px;
     }
-    // @media (min-width: 320px) and (max-width: 568px){
-    //     // margin: 0 auto;
-    //     // width: 100%;
-    //     padding-top: 30px;
-    //     padding-bottom: 30px;
-        
-        
-    // }
-    
+   
 }
 .logo-box__footer{
     
