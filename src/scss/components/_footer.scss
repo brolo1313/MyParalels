@@ -104,26 +104,19 @@ li>p>a:hover{
 
 .foto-protfolio>img{
     width: 100%;
-    // margin-bottom: 5px;
-    
-
-    
+     
 }
 
 .foto-protfolio{
     width: inherit;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 33.333% 33.333% 33.333%;
-    
    
 }
 
-.imglist {
-    display:contents;
+
+
+.imglist a img {
+   vertical-align: baseline;
 }
-
-
 
 
 .footer-down{
@@ -133,12 +126,19 @@ li>p>a:hover{
 .under-footer{
     width:100% ;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 30px;
-    @media (min-width: 777px) and (max-width: 1124px) {
+
+    max-width: 950px;
+    margin: 0 auto;
+    @media (min-width: 568px) and (max-width: 1086px) {
+        max-width:80%;
 		padding-top: 27px;
         padding-bottom: 27px;
+    }
+    @media (min-width: 320px) and (max-width: 568px){
+        max-width:90%;
     }
    
 }
@@ -162,8 +162,6 @@ li>p>a:hover{
     @media (min-width: 320px) and (max-width: 568px){
         flex-direction: column;
         gap: 0;
-        
-        
     }
     @media (min-width: 569px) and (max-width: 862px){
      display:block;
@@ -175,7 +173,6 @@ li>p>a:hover{
 
 .myContact{
     color: #989898;
-
     a {
         color: inherit;
 

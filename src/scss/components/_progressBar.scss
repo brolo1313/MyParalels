@@ -6,14 +6,15 @@
     flex-wrap: wrap;
     justify-content: space-around;
 
-    margin-top: 70px;
-    margin-left: 130px;
-    margin-right: 130px;
+    max-width: 950px;
+    margin: 70px auto 0 auto;
     padding-bottom: 50px;
-
+    @media (min-width: 568px) and (max-width: 1086px){
+      max-width:80%;
+    }
     @media (min-width: 320px) and (max-width: 568px){
 
-        margin: 50px 20px 0px 20px;
+         max-width:60%;
     }
 }
 
@@ -70,6 +71,7 @@
 
 
 .anim__on{
+    
     animation-fill-mode: forwards;
     animation-duration: 1.7s;
     animation-delay :  1.5s;

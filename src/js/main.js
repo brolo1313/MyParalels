@@ -182,6 +182,44 @@ for(let anchor of anchors) {
 
  
 
+//  portfolio foto like animation
+const likeImageOff = document.querySelectorAll('.heart__off'); 
+const likeImageOn = document.querySelectorAll('.heart__on'); 
+const boxComments = document.querySelectorAll('.box-comments'); 
+const cntLike = document.querySelectorAll('.counter__like')
+   
+console.log(boxComments)
+
+
+likeImageOff.forEach((item, index) =>{
+  item.addEventListener('click', function (){
+    item.classList.toggle('active');
+    const current = Number(cntLike[index].innerHTML);
+    // console.log(current)
+    const inc = item.classList.contains("active") ? 1 : -1;
+    cntLike[index].innerHTML = current + inc;
+  })
+});
+
+  
+
+// function checkOnChangeLike (i){
+//     console.log(i);
+ 
+//     i.addEventListener('click', ({ target: t }) => {
+//       console.log(t)
+//       if (t.classList.contains('heart__off')) {
+//         const index = [...document.querySelectorAll('.heart__off')].indexOf(t);
+        
+//         const count = document.querySelectorAll('.counter__like')[index];
+//         console.log(count)
+//         i.classList.toggle('active');
+//         count.textContent -= [ 1, -1 ][+i.classList.contains('active')];
+//       }
+//     });
+      
+
+//   } 
 
 
 

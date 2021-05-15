@@ -54,34 +54,24 @@ h5{
 
 .main-inform{
 	display: flex;
+	max-width: 950px;
 	column-gap: 10px;
 
-	margin-left: 130px;
-	margin-right: 130px;
+	margin: 0 auto;
 	margin-top: 40px;
 	box-sizing: border-box;
 	text-align: center;
 
-
-
-
-	@media (min-width: 777px) and (max-width: 1124px){
-		gap: 2em;
-		
+	@media (min-width: 568px) and (max-width: 1086px){
+		max-width:80%;
 	}
-	@media (min-width: 780px) and (max-width: 862px){
-		margin-left: 50px;
-		margin-right: 50px;
-	}
-	@media (min-width: 568px) and (max-width: 780px){
-		margin-left: 50px;
-		margin-right: 50px;
-	}
+	
 	@media (min-width: 320px) and (max-width: 568px){
 		margin: 0 auto;
 		padding:  20px 30px 20px 30px;
 		column-gap: 0px;
 		flex-wrap: wrap;
+		
 	}
 }
 
@@ -93,10 +83,7 @@ h5{
 	border-radius: 5px;
 	cursor: pointer;
 
-	
-	
-
-	box-shadow: 5px 5px 5px #111112;
+	box-shadow: -5px 0px 30px #111112;
 	
 	@media (min-width: 777px) and (max-width: 1124px){
 		padding: 10px;
@@ -194,8 +181,8 @@ h5{
 
 .separator-bg{
 	width: 100%;
-	height: 400px;
-	line-height: 400px;
+	height: 300px;
+	line-height: 300px;
 	// background: #fefcea; /* Для старых браузров */
     background: #4b3f34;
 	-moz-background-size: 100%; /* Firefox 3.6+ */
@@ -235,7 +222,7 @@ section#portfolio-block::before {
     content: '';
     display: block;
     height: 80px;
-    margin-top: -80px;
+    // margin-top: -80px;
     visibility: hidden;
 }
 
