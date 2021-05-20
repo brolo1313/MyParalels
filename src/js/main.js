@@ -8,11 +8,8 @@ const body = document.querySelector('body');
 
 
 
-
-
 tabsBtn.forEach(onTabClick) ;
   
-
 
 function onTabClick (item) {
   item.addEventListener("click", function(){
@@ -182,7 +179,9 @@ for(let anchor of anchors) {
 
  
 
-//  portfolio foto like animation
+//  тест лайки и счетчик, сеция портфолио
+
+
 const likeImageOff = document.querySelectorAll('.heart__off'); 
 const likeImageOn = document.querySelectorAll('.heart__on'); 
 const boxComments = document.querySelectorAll('.box-comments'); 
@@ -196,11 +195,14 @@ likeImageOff.forEach((item, index) =>{
     item.classList.toggle('active');
     const current = Number(cntLike[index].innerHTML);
     // console.log(current)
-    const inc = item.classList.contains("active") ? 1 : -1;
+    const inc = item.classList.contains("active") ? +1 : -1;
     cntLike[index].innerHTML = current + inc;
-    // let likes = +localStorage.getItem("current");
-    // console.log(likes)
-    // localStorage.setItem("counter__like", likes);  
+
+   
+    // localStorage.setItem("counter__like", cntLike[index].innerHTML); 
+    // localStorage.getItem("counter__like");
+    // console.log(localStorage.getItem("counter__like"))
+    
   })
 });
 
@@ -213,7 +215,9 @@ const kiyv = 703448;
 const dubai = 292223;
 const fastiv = 709248;
 
-fetch(`http://api.openweathermap.org/data/2.5/weather?id=${kiyv}&units=metric&appid=c768c355b8819115b257ee9d30bf781b`)
+const urlApi = 'http://api.openweathermap.org/data/2.5/weather';
+
+fetch(`${urlApi}?id=${kiyv}&units=metric&appid=c768c355b8819115b257ee9d30bf781b`)
     //конвертируем данние дата в json
      .then(function (resp) { return resp.json() }) 
     //  тут получаем данние в json
@@ -244,3 +248,16 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?id=${kiyv}&units=metric&ap
         
       });                                         
  
+
+
+
+// locale storage тест
+
+const area = document.getElementById('area');
+// console.log(area)
+
+      area.value = localStorage.getItem('area');
+      // console.log(area.value)
+      area.oninput = () => {
+      localStorage.setItem('area', area.value)
+    };

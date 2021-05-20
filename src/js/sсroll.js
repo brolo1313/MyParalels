@@ -36,8 +36,7 @@
         if(entry.isIntersecting === true) {
             entry.target.classList.toggle ('anim__on');
             
-        }
-        
+         }
        })
     })
 
@@ -62,9 +61,6 @@ observer = new IntersectionObserver((entries) => {
         }
        })
     })
-
-
-
 
 //     animationOnBlock.forEach(animation => {
 //     observer.observe(animation)
