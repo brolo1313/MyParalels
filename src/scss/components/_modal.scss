@@ -1,7 +1,6 @@
 .modal__mask {
     visibility: hidden;
 
-
     position: fixed;
     top: 0;
     left:0;
@@ -47,7 +46,6 @@
 
     background: rgba(136, 10, 151, 1);
 
-    
 }
 
 .write__icon{
@@ -57,9 +55,7 @@
     top: 0;
 
     transition:  0.5s ease-in-out;
-    // opacity:1;
-
-
+  
 }
 
 .icon__item {
@@ -157,8 +153,6 @@
  
     transition: all 0.5s ease-in-out;
 
-   
-
 }
 
 
@@ -174,7 +168,6 @@
     padding: 30px 30px;
 
     
-
     background: rgba(136 , 10 , 151 , 0.8);
     border-radius: 10px;
 
@@ -220,10 +213,5 @@
     text-align: center;
 }
 
-
-
-
-
-// VALIDATE
 
 

@@ -188,7 +188,7 @@ const likeImageOn = document.querySelectorAll('.heart__on');
 const boxComments = document.querySelectorAll('.box-comments'); 
 const cntLike = document.querySelectorAll('.counter__like')
    
-console.log(boxComments)
+// console.log(boxComments)
 
 
 likeImageOff.forEach((item, index) =>{
@@ -198,30 +198,49 @@ likeImageOff.forEach((item, index) =>{
     // console.log(current)
     const inc = item.classList.contains("active") ? 1 : -1;
     cntLike[index].innerHTML = current + inc;
+    // let likes = +localStorage.getItem("current");
+    // console.log(likes)
+    // localStorage.setItem("counter__like", likes);  
   })
 });
 
   
 
-// function checkOnChangeLike (i){
-//     console.log(i);
- 
-//     i.addEventListener('click', ({ target: t }) => {
-//       console.log(t)
-//       if (t.classList.contains('heart__off')) {
-//         const index = [...document.querySelectorAll('.heart__off')].indexOf(t);
+
+
+// подключаем api погоды
+const kiyv = 703448;
+const dubai = 292223;
+const fastiv = 709248;
+
+fetch(`http://api.openweathermap.org/data/2.5/weather?id=${kiyv}&units=metric&appid=c768c355b8819115b257ee9d30bf781b`)
+    //конвертируем данние дата в json
+     .then(function (resp) { return resp.json() }) 
+    //  тут получаем данние в json
+     .then(function (data) {                       
+      //  console.log(data)
+       document.querySelector('.city__name').innerHTML = data.name;
+       document.querySelector('.city_temp').innerHTML = Math.round(data.main.temp) + '&deg';
+       document.querySelector('.city__weather').innerHTML = data.weather[0].description;
+   
+       document.querySelector('.weather__wind').innerHTML = '<img src="/img/wind.png">'+'<br> ' + data.wind.speed + ' ' + 'm/s';
+       document.querySelector('.weather__pressure').innerHTML = '<img src="/img/pressure.png">'+'<br> ' + data.main.pressure + ' ' + 'hPa';
+       
+     });                                         
+
+
+     fetch('http://api.openweathermap.org/data/2.5/weather?id='+fastiv+'&units=metric&appid=c768c355b8819115b257ee9d30bf781b')
+     //конвертируем данние дата в json
+      .then(function (resp) { return resp.json() }) 
+     //  тут получаем данние в json
+      .then(function (data) {                       
+        // console.log(data)
+        document.querySelector('.dubai').innerHTML = data.name;
+        document.querySelector('.dubai__temp').innerHTML = Math.round(data.main.temp) + '&deg';
+        document.querySelector('.dubai__weather').innerHTML = data.weather[0].description;
+    
+        document.querySelector('.dubai__wind').innerHTML = '<img src="/img/wind.png">'+'<br> ' + data.wind.speed + ' ' + 'm/s';
+        document.querySelector('.dubai__pressure').innerHTML = '<img src="/img/pressure.png">'+'<br> ' + data.main.pressure + ' ' + 'hPa';
         
-//         const count = document.querySelectorAll('.counter__like')[index];
-//         console.log(count)
-//         i.classList.toggle('active');
-//         count.textContent -= [ 1, -1 ][+i.classList.contains('active')];
-//       }
-//     });
-      
-
-//   } 
-
-
-
-
-
+      });                                         
+ 

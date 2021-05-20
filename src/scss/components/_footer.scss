@@ -7,8 +7,6 @@ footer{
     
 }
 .footer-top{
-    // display: flex;
-    // gap: 4rem;
     display: grid;
     gap: 5%;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) ;
@@ -38,10 +36,6 @@ footer{
 .footer-column{
     width: 100%;
     text-align: left;
-    @media (min-width: 320px) and (max-width: 568px){
-        
-        
-    }
 }
 
 
@@ -109,7 +103,6 @@ li>p>a:hover{
 
 .foto-protfolio{
     width: inherit;
-   
 }
 
 
@@ -143,8 +136,6 @@ li>p>a:hover{
    
 }
 .logo-box__footer{
-    
-        // margin-left: 50px;
         display: flex;
         align-items: center;
     
@@ -153,7 +144,6 @@ li>p>a:hover{
 .site-contact{
    display: flex;
    justify-content: flex-end;
-//    margin: 0 45px 0 auto;
    gap: 2.2em;
    @media (min-width: 777px) and (max-width: 1124px) {
     
@@ -167,7 +157,6 @@ li>p>a:hover{
      display:block;
     }
     
-
 }
 
 

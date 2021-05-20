@@ -5,6 +5,8 @@
  let blockSkills = document.querySelector('.block__ourskills')
  let blockService = document.querySelectorAll('.block-service');
  let blockAboutUs = document.querySelector('.about-us');
+ let wraperProgres = document.querySelector('.progress_wrapper');
+ 
 
  const scrollAnimation = () => {
        let windowCenter = (window.innerHeight / 2) + window.scrollY;
@@ -25,21 +27,6 @@
 //  scrollAnimation();
  
 
-
-
-
-
-// const callbackFunction = function(entries) {
-//     console.log(entries[0]);
-// }
-
-// const observer = new IntersectionObserver(callbackFunction,{
-//     threshold:[0.5]
-// });
-
-// observer.observe(blockSkills);
-
-
 // анимация about us progress line
 
  observer = new IntersectionObserver((entries) => {
@@ -47,16 +34,12 @@
     // console.log(progressBar);
     entries.forEach(entry =>  {
         if(entry.isIntersecting === true) {
-            // entries[0].target.style.animation = 'rotate-one 3s forwards ease-out';
             entry.target.classList.toggle ('anim__on');
             
-           
         }
         
        })
     })
-
-
 
 
 progressBar.forEach(progress => {
@@ -70,14 +53,12 @@ observer = new IntersectionObserver((entries) => {
     // console.log(entries[0]);
     // console.log(progressBar);
     entries.forEach(entry =>  {
-        if(entry.isIntersecting === true) {
-            // entry.target.classList.add ('anim__on');
+        if(entry.isIntersecting === true) {  
             entry.target.style.animation = 'rotate-one 3s forwards ease-out';
-       
         }
         else {
             entry.target.style.animation = 'none';
-            // entry.target.classList.remove ('anim__on');
+            
         }
        })
     })

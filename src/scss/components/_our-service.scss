@@ -37,7 +37,6 @@ h5{
 	text-align: center;
 	margin-top: 15px;
 
-	
 
 	@media (min-width: 569px) and (max-width: 1124px){
 		font-size: 16px;
@@ -99,11 +98,6 @@ h5{
 		width: 45%;
 	}
 
-	&:hover {
-		opacity: 0;
-	}
-
-	
 }
 
 
@@ -155,14 +149,7 @@ h5{
 	transform: rotateY(180deg);
 	
 	
-	
 }
-
-
-// .main-inform>div:nth-child(3) > .turn__over {
-	
-// 	background-image: url(/img/header-background.jpg);
-// }
 
 
 .card-img{
@@ -172,7 +159,6 @@ h5{
 	@media (min-width: 320px) and (max-width: 568px){
 		width: 60%;
     	margin: 15px auto 15px auto;
-	
 	}
 	
 	

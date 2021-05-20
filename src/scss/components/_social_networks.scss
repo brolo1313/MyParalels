@@ -8,10 +8,7 @@
 .social-container{
     position: relative;
     max-height: 350px;
-    overflow: hidden;
-    // box-shadow: 0px 0px 30px 20px black;
-    
-
+    overflow: hidden;  
 }
 
 
@@ -62,9 +59,7 @@
     
     
     height:200px;
-    // margin-top: 35px;
-    // padding-bottom: 100px;
-    // margin-left: 130px;
+
     @media (min-width: 320px) and (max-width: 599px){
         padding-top: 0px;
         
@@ -80,7 +75,6 @@
         @media (min-width: 320px) and (max-width: 699px){
             align-self: center;
             
-
         }
     }
 
@@ -99,5 +93,4 @@ video{
     
     border-radius: 50%;
     
-    // border: 3px solid #099f60;
 }
