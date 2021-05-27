@@ -7,25 +7,9 @@
  let blockAboutUs = document.querySelector('.about-us');
  let wraperProgres = document.querySelector('.progress_wrapper');
  
-
- const scrollAnimation = () => {
-       let windowCenter = (window.innerHeight / 2) + window.scrollY;
-        
-       progressBar.forEach(el => {
-           let scrollOffset = el.offsetTop + (el.offsetHeight / 2);
-     
-    
-            console.log(windowCenter)
-           if (windowCenter >= scrollOffset) {
-               el.classList.add('anim__on');
-           } else {
-               el.classList.remove('anim__on');
-           }
-       });
-   };
-
-//  scrollAnimation();
  
+ 
+
 
 // анимация about us progress line
 
@@ -34,13 +18,10 @@
     // console.log(progressBar);
     entries.forEach(entry =>  {
         if(entry.isIntersecting === true) {
-            entry.target.classList.toggle ('anim__on');
-            
+            entry.target.classList.add ('anim__on'); 
          }
        })
     })
-
-
 progressBar.forEach(progress => {
     observer.observe(progress)
 })
