@@ -13,3 +13,4 @@ https://sleepy-swanson-89075f.netlify.app/
 
 5.php (send mail)
 
+6.Localstorage
