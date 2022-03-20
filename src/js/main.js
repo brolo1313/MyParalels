@@ -1,3 +1,7 @@
+//=include validate.js
+//=include sсroll.js
+
+
 
 const navMobile = document.getElementById ('nav-mobile');
 const burger = document.getElementById ('burgerId');
