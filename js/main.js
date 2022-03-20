@@ -353,42 +353,42 @@ likeImageOff.forEach((item, index) =>{
 
 
 // подключаем api погоды
-const kiyv = 703448;
-const dubai = 292223;
-const fastiv = 709248;
+// const kiyv = 703448;
+// const dubai = 292223;
+// const fastiv = 709248;
 
-const urlApi = 'http://api.openweathermap.org/data/2.5/weather';
+// const urlApi = 'http://api.openweathermap.org/data/2.5/weather';
 
-fetch(`${urlApi}?id=${kiyv}&units=metric&appid=c768c355b8819115b257ee9d30bf781b`)
-    //конвертируем данние дата в json
-     .then(function (resp) { return resp.json() }) 
-    //  тут получаем данние в json
-     .then(function (data) {                       
-      //  console.log(data)
-       document.querySelector('.city__name').innerHTML = data.name;
-       document.querySelector('.city_temp').innerHTML = Math.round(data.main.temp) + '&deg';
-       document.querySelector('.city__weather').innerHTML = data.weather[0].description;
+// fetch(`${urlApi}?id=${kiyv}&units=metric&appid=c768c355b8819115b257ee9d30bf781b`)
+//     //конвертируем данние дата в json
+//      .then(function (resp) { return resp.json() }) 
+//     //  тут получаем данние в json
+//      .then(function (data) {                       
+//       //  console.log(data)
+//        document.querySelector('.city__name').innerHTML = data.name;
+//        document.querySelector('.city_temp').innerHTML = Math.round(data.main.temp) + '&deg';
+//        document.querySelector('.city__weather').innerHTML = data.weather[0].description;
    
-       document.querySelector('.weather__wind').innerHTML = '<img src="/img/wind.png">'+'<br> ' + data.wind.speed + ' ' + 'm/s';
-       document.querySelector('.weather__pressure').innerHTML = '<img src="/img/pressure.png">'+'<br> ' + data.main.pressure + ' ' + 'hPa';
+//        document.querySelector('.weather__wind').innerHTML = '<img src="/img/wind.png">'+'<br> ' + data.wind.speed + ' ' + 'm/s';
+//        document.querySelector('.weather__pressure').innerHTML = '<img src="/img/pressure.png">'+'<br> ' + data.main.pressure + ' ' + 'hPa';
        
-     });                                         
+//      });                                         
 
 
-     fetch('http://api.openweathermap.org/data/2.5/weather?id='+fastiv+'&units=metric&appid=c768c355b8819115b257ee9d30bf781b')
-     //конвертируем данние дата в json
-      .then(function (resp) { return resp.json() }) 
-     //  тут получаем данние в json
-      .then(function (data) {                       
-        // console.log(data)
-        document.querySelector('.dubai').innerHTML = data.name;
-        document.querySelector('.dubai__temp').innerHTML = Math.round(data.main.temp) + '&deg';
-        document.querySelector('.dubai__weather').innerHTML = data.weather[0].description;
+//      fetch('http://api.openweathermap.org/data/2.5/weather?id='+fastiv+'&units=metric&appid=c768c355b8819115b257ee9d30bf781b')
+//      //конвертируем данние дата в json
+//       .then(function (resp) { return resp.json() }) 
+//      //  тут получаем данние в json
+//       .then(function (data) {                       
+//         // console.log(data)
+//         document.querySelector('.dubai').innerHTML = data.name;
+//         document.querySelector('.dubai__temp').innerHTML = Math.round(data.main.temp) + '&deg';
+//         document.querySelector('.dubai__weather').innerHTML = data.weather[0].description;
     
-        document.querySelector('.dubai__wind').innerHTML = '<img src="/img/wind.png">'+'<br> ' + data.wind.speed + ' ' + 'm/s';
-        document.querySelector('.dubai__pressure').innerHTML = '<img src="/img/pressure.png">'+'<br> ' + data.main.pressure + ' ' + 'hPa';
+//         document.querySelector('.dubai__wind').innerHTML = '<img src="/img/wind.png">'+'<br> ' + data.wind.speed + ' ' + 'm/s';
+//         document.querySelector('.dubai__pressure').innerHTML = '<img src="/img/pressure.png">'+'<br> ' + data.main.pressure + ' ' + 'hPa';
         
-      });                                         
+//       });                                         
  
 
 
